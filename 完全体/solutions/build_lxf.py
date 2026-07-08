@@ -7,8 +7,8 @@ build_lxf.py —— DBS Solutions 层：读取 blueprints 蓝图，生成 LumaX 
   manifest.json  元信息与计数
   media/images/  输入卡示例占位图（用户导入后替换）
 
-用法：  py build_lxf.py
-输出：  E:\\Projects\\agent全自动生图\\V9.0完全体8分镜.lxf
+用法：  py build_lxf.py   （或任意 Python 3.11+：python build_lxf.py）
+输出：  仓库根目录\\V9.1定制版8分镜.lxf（OUT_LXF 相对本文件定位，异地可用）
 """
 import json
 import shutil
@@ -21,8 +21,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 BP = HERE.parent / "blueprints"
 PROMPTS = BP / "prompts"
-# 示例占位图来源：素材A解压目录（构建时复制进包）
-MEDIA_SRC = Path(r"C:\Users\Administrator\AppData\Local\Temp\claude\E--Projects-agent-----\17e199f4-39d7-4cb4-bccd-cdcfc4a4411c\scratchpad\lxf_extract\media\images")
+# 示例占位图来源：蓝图自包含资产（随仓库同步，家/公司两机均可构建）
+MEDIA_SRC = BP / "assets"
 OUT_LXF = HERE.parent.parent / "V9.1定制版8分镜.lxf"
 
 CHAT_DEFAULT = {}
