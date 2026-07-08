@@ -14,11 +14,11 @@ PROMPTS = BP / 'prompts'
 AGENT_JSON = Path(r'E:\LumaX Flow\data\agent\agent.json')
 USER_EDITABLE = {'REQ1', 'REQ2'}   # 用户卡：差异只提示不判失败
 
-from build_lxf import load_spec, variant_from_argv
+from build_lxf import load_spec, variant_from_argv, spec_from_argv, OPT_WITH_VALUE
 
 _args = sys.argv[1:]
 PID = [a for i, a in enumerate(_args)
-       if not a.startswith('--') and (i == 0 or _args[i - 1] != '--variant')][0]
+       if not a.startswith('--') and (i == 0 or _args[i - 1] not in OPT_WITH_VALUE)][0]
 cfg = json.loads(AGENT_JSON.read_text(encoding='utf-8'))
 base = f"http://127.0.0.1:{cfg['port']}/agent/v1"
 
@@ -27,7 +27,7 @@ def api(path):
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.loads(r.read().decode('utf-8'))
 
-spec = load_spec(variant_from_argv(_args))
+spec = load_spec(variant_from_argv(_args), spec_from_argv(_args))
 
 def expected_content(c):
     if c.get('promptFile'):

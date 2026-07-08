@@ -15,7 +15,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-from build_lxf import load_spec, variant_from_argv
+from build_lxf import load_spec, variant_from_argv, spec_from_argv, OPT_WITH_VALUE
 
 HERE = Path(__file__).resolve().parent
 BP = HERE.parent / "blueprints"
@@ -44,7 +44,7 @@ def card_content(card):
 
 def main():
     args = sys.argv[1:]
-    spec = load_spec(variant_from_argv(args))
+    spec = load_spec(variant_from_argv(args), spec_from_argv(args))
     pid = None
     only_refs = None
     if "--project" in args:
@@ -70,7 +70,7 @@ def main():
         return
 
     pos = [a for i, a in enumerate(args)
-           if not a.startswith("--") and (i == 0 or args[i - 1] not in ("--variant", "--project", "--refs"))]
+           if not a.startswith("--") and (i == 0 or args[i - 1] not in OPT_WITH_VALUE)]
     title = pos[0] if pos else spec["project_title"]
     proj = api(base, token, "POST", "/projects", {"title": title})
     pid = proj["id"]
@@ -100,7 +100,7 @@ def main():
     applied = api(base, token, "POST", f"/projects/{pid}/apply", graph)
     print(f"apply 成功: 卡片 {len(applied.get('cards', []))} | "
           f"连接 {len(applied.get('connections', []))} | 分组 {len(applied.get('groups', []))}")
-    print("下一步：在画布上给 8 张输入卡放入你的图片（图7无背面需求放主商品图副本、图8放版型上身参考），然后按组 ①→②→③→④ 运行。")
+    print("下一步：按画布左侧「①使用说明」卡给输入卡放图，然后按组 ①→②（查锁卡）→③→④ 运行。")
 
 
 if __name__ == "__main__":

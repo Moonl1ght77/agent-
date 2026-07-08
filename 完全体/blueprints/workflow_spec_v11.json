@@ -1,0 +1,98 @@
+{
+  "project_title": "V11-健身棚拍半身版-8分镜",
+  "output_file": "V11健身棚拍半身版8分镜.lxf",
+  "app_version": "1.4.6",
+  "defaults": {
+    "chat": { "model": "gpt-5.5", "provider": "jijing" },
+    "image": { "model": "gpt-image-2", "provider": "jijing" }
+  },
+  "cards": [
+    { "ref": "DOC1", "type": "sticky_note", "title": "①使用说明与硬规则（先读我）", "x": -950, "y": -700, "w": 460, "h": 720, "promptFile": "DOC1_使用说明_v11.txt" },
+    { "ref": "REQ1", "type": "text", "title": "需求卡①·通用硬规则（可编辑）", "x": -950, "y": 100, "w": 420, "h": 340, "promptFile": "REQ1_通用硬规则_v11.txt" },
+    { "ref": "REQ2", "type": "text", "title": "需求卡②·输出与背景控制（可编辑）", "x": -950, "y": 500, "w": 420, "h": 280, "promptFile": "REQ2_输出与背景控制_v11.txt" },
+    { "ref": "REQ3", "type": "text", "title": "需求卡③·穿搭风格（可编辑）", "x": -950, "y": 840, "w": 420, "h": 260, "promptFile": "REQ3_穿搭风格_v11.txt" },
+    { "ref": "REQ4", "type": "text", "title": "需求卡④·身材与动态（可编辑）", "x": -950, "y": 1160, "w": 420, "h": 300, "promptFile": "REQ4_身材与动态_v11.txt" },
+
+    { "ref": "IN1", "type": "ai_image", "title": "输入图1·模特参考·带体型（替换成你的）", "x": -380, "y": -700, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "c1d90779-27b9-468d-9c79-b2b54ce2cc5f.jpg" },
+    { "ref": "IN2", "type": "ai_image", "title": "输入图2·主商品正面白底（替换成你的）", "x": -380, "y": -320, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "IN3", "type": "ai_image", "title": "输入图3·主商品背面或细节拼图（替换成你的）", "x": -380, "y": 60, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "IN4", "type": "ai_image", "title": "输入图4·棚拍背景参考（替换成你的）", "x": -380, "y": 440, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "e2d54e28-24fb-4552-90e3-e97b305449b5.jpg" },
+    { "ref": "IN5", "type": "ai_image", "title": "输入图5·姿势参考（供G5，只取几何）", "x": -380, "y": 820, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "8cbd5997-9551-4f81-bdb4-9f7da8499319.jpg" },
+    { "ref": "IN6", "type": "ai_image", "title": "输入图6·穿搭参考（只进文字锁，可不放）", "x": -380, "y": 1200, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "8cbd5997-9551-4f81-bdb4-9f7da8499319.jpg" },
+
+    { "ref": "S1", "type": "ai_image", "title": "S1·背景清洗（干净图原样复刻）", "x": 40, "y": 440, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "medium" }, "promptFile": "S1_场景清洗.txt" },
+    { "ref": "S2", "type": "ai_image", "title": "S2·细节特写（推荐手动放裁剪图）", "x": 40, "y": -320, "w": 255, "h": 340, "data": { "size": "1:1", "resolution": "1K", "quality": "high" }, "promptFile": "S2_细节特写.txt" },
+
+    { "ref": "A1", "type": "ai_chat", "title": "A1·商品DNA锁定官（色卡+正背图标锁）", "x": 540, "y": -460, "w": 360, "h": 300, "promptFile": "A1_商品DNA_v11.txt" },
+    { "ref": "A2", "type": "ai_chat", "title": "A2·模特DNA与造型官（体型+穿搭文字锁）", "x": 540, "y": -90, "w": 360, "h": 300, "promptFile": "A2_人物造型_v11.txt" },
+    { "ref": "A3", "type": "ai_chat", "title": "A3·棚拍八分镜官（半身健身版）", "x": 540, "y": 280, "w": 360, "h": 300, "promptFile": "A3_场景八分镜_v11.txt" },
+
+    { "ref": "C", "type": "ai_chat", "title": "C·总控编译器（健身棚拍半身8组）", "x": 1050, "y": -140, "w": 400, "h": 480, "promptFile": "C_总控编译器_v11.txt" },
+
+    { "ref": "P1", "type": "ai_chat", "title": "P1·抽取Set1_只抽取不改写", "x": 1600, "y": -1000, "w": 300, "h": 220, "content": "只从连接的节点输出中提取“Set 1”的内容。只输出：\nPositive prompt:\n\nNegative prompt:" },
+    { "ref": "P2", "type": "ai_chat", "title": "P2·抽取Set2_只抽取不改写", "x": 1600, "y": -730, "w": 300, "h": 220, "content": "只从连接的节点输出中提取“Set 2”的内容。只输出：\nPositive prompt:\n\nNegative prompt:" },
+    { "ref": "P3", "type": "ai_chat", "title": "P3·抽取Set3_只抽取不改写", "x": 1600, "y": -460, "w": 300, "h": 220, "content": "只从连接的节点输出中提取“Set 3”的内容。只输出：\nPositive prompt:\n\nNegative prompt:" },
+    { "ref": "P4", "type": "ai_chat", "title": "P4·抽取Set4_只抽取不改写", "x": 1600, "y": -190, "w": 300, "h": 220, "content": "只从连接的节点输出中提取“Set 4”的内容。只输出：\nPositive prompt:\n\nNegative prompt:" },
+    { "ref": "P5", "type": "ai_chat", "title": "P5·抽取Set5_只抽取不改写", "x": 1600, "y": 80, "w": 300, "h": 220, "content": "只从连接的节点输出中提取“Set 5”的内容。只输出：\nPositive prompt:\n\nNegative prompt:" },
+    { "ref": "P6", "type": "ai_chat", "title": "P6·抽取Set6_只抽取不改写", "x": 1600, "y": 350, "w": 300, "h": 220, "content": "只从连接的节点输出中提取“Set 6”的内容。只输出：\nPositive prompt:\n\nNegative prompt:" },
+    { "ref": "P7", "type": "ai_chat", "title": "P7·抽取Set7_只抽取不改写", "x": 1600, "y": 620, "w": 300, "h": 220, "content": "只从连接的节点输出中提取“Set 7”的内容。只输出：\nPositive prompt:\n\nNegative prompt:" },
+    { "ref": "P8", "type": "ai_chat", "title": "P8·抽取Set8_只抽取不改写", "x": 1600, "y": 890, "w": 300, "h": 220, "content": "只从连接的节点输出中提取“Set 8”的内容。只输出：\nPositive prompt:\n\nNegative prompt:" },
+
+    { "ref": "G1", "type": "ai_image", "title": "G1·正面半身主图位（2K）", "x": 2060, "y": -1080, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "content": " " },
+    { "ref": "G2", "type": "ai_image", "title": "G2·背面印花卖点位（2K）", "x": 2060, "y": -695, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "content": " " },
+    { "ref": "G3", "type": "ai_image", "title": "G3·头到胸logo细节位（2K）", "x": 2060, "y": -310, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "content": " " },
+    { "ref": "G4", "type": "ai_image", "title": "G4·下摆互动位（2K）", "x": 2060, "y": 75, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "content": " " },
+    { "ref": "G5", "type": "ai_image", "title": "G5·姿势参考位（2K）", "x": 2060, "y": 460, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "content": " " },
+    { "ref": "G6", "type": "ai_image", "title": "G6·叉腰力量位（2K）", "x": 2060, "y": 845, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "content": " " },
+    { "ref": "G7", "type": "ai_image", "title": "G7·侧转肩背位（2K）", "x": 2060, "y": 1230, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "content": " " },
+    { "ref": "G8", "type": "ai_image", "title": "G8·稍远动态位·头到大腿（2K）", "x": 2060, "y": 1615, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "content": " " },
+
+    { "ref": "QA", "type": "ai_chat", "title": "QA·成品质检（半身框取+卖点专项）", "x": 2560, "y": -140, "w": 400, "h": 480, "promptFile": "QA_质检八图_v11.txt" },
+    { "ref": "R", "type": "ai_chat", "title": "R·返修提示词编译器", "x": 2560, "y": 420, "w": 360, "h": 280, "promptFile": "R_返修编译.txt" },
+    { "ref": "RG", "type": "ai_image", "title": "RG·返修生图（单卡手动跑，2K）", "x": 2560, "y": 770, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "content": " " },
+
+    { "ref": "X1", "type": "ai_image", "title": "X1·四宫格细节图", "x": 3070, "y": -280, "w": 255, "h": 340, "data": { "size": "1:1", "resolution": "1K", "quality": "high" }, "promptFile": "X1_四宫格细节.txt" },
+    { "ref": "X2", "type": "ai_image", "title": "X2·详情页首屏（9:16）", "x": 3070, "y": 140, "w": 255, "h": 340, "data": { "size": "9:16", "resolution": "1K", "quality": "high" }, "promptFile": "X2_详情页首屏.txt" }
+  ],
+  "connections_note": "顺序即参考图槽位。生图卡统一：槽1模特(IN1)/槽2商品正面(IN2)/槽3细节特写(S2)/槽4棚拍背景(S1)/(仅G2)槽5背面图(IN3)/(仅G5)槽5姿势(IN5)，文本最后连。IN6只连A2（文字锁）；IN3只连A1/G2/QA。",
+  "connections": [
+    ["IN4", "S1"],
+    ["IN2", "S2"],
+
+    ["IN2", "A1"], ["IN3", "A1"], ["S2", "A1"], ["REQ1", "A1"], ["REQ2", "A1"],
+    ["IN1", "A2"], ["IN6", "A2"], ["REQ3", "A2"], ["REQ4", "A2"],
+    ["S1", "A3"], ["IN5", "A3"], ["REQ1", "A3"], ["REQ2", "A3"], ["REQ4", "A3"],
+
+    ["IN1", "C"], ["IN2", "C"], ["S2", "C"], ["S1", "C"], ["IN3", "C"], ["IN5", "C"],
+    ["A1", "C"], ["A2", "C"], ["A3", "C"], ["REQ1", "C"], ["REQ2", "C"], ["REQ3", "C"], ["REQ4", "C"],
+
+    ["C", "P1"], ["C", "P2"], ["C", "P3"], ["C", "P4"], ["C", "P5"], ["C", "P6"], ["C", "P7"], ["C", "P8"],
+
+    ["IN1", "G1"], ["IN2", "G1"], ["S2", "G1"], ["S1", "G1"], ["P1", "G1"],
+    ["IN1", "G2"], ["IN2", "G2"], ["S2", "G2"], ["S1", "G2"], ["IN3", "G2"], ["P2", "G2"],
+    ["IN1", "G3"], ["IN2", "G3"], ["S2", "G3"], ["S1", "G3"], ["P3", "G3"],
+    ["IN1", "G4"], ["IN2", "G4"], ["S2", "G4"], ["S1", "G4"], ["P4", "G4"],
+    ["IN1", "G5"], ["IN2", "G5"], ["S2", "G5"], ["S1", "G5"], ["IN5", "G5"], ["P5", "G5"],
+    ["IN1", "G6"], ["IN2", "G6"], ["S2", "G6"], ["S1", "G6"], ["P6", "G6"],
+    ["IN1", "G7"], ["IN2", "G7"], ["S2", "G7"], ["S1", "G7"], ["P7", "G7"],
+    ["IN1", "G8"], ["IN2", "G8"], ["S2", "G8"], ["S1", "G8"], ["P8", "G8"],
+
+    ["IN1", "QA"], ["IN2", "QA"], ["IN3", "QA"], ["S1", "QA"],
+    ["G1", "QA"], ["G2", "QA"], ["G3", "QA"], ["G4", "QA"], ["G5", "QA"], ["G6", "QA"], ["G7", "QA"], ["G8", "QA"],
+    ["C", "QA"],
+
+    ["QA", "R"], ["C", "R"],
+    ["IN1", "RG"], ["IN2", "RG"], ["S2", "RG"], ["S1", "RG"], ["R", "RG"],
+
+    ["IN2", "X1"], ["S2", "X1"], ["A1", "X1"],
+    ["G1", "X2"], ["G3", "X2"], ["G5", "X2"], ["IN2", "X2"], ["X1", "X2"], ["A1", "X2"]
+  ],
+  "groups": [
+    { "ref": "GRP1", "title": "①清洗与细节（S2可手动放图跳过）", "color": "#F59E0B", "members": ["S1", "S2"] },
+    { "ref": "GRP2", "title": "②分析与编译（跑完先检查锁卡）", "color": "#7C3AED", "members": ["A1", "A2", "A3", "C", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8"] },
+    { "ref": "GRP3", "title": "③八分镜生图（2K计费，跑前确认）", "color": "#10B981", "members": ["G1", "G2", "G3", "G4", "G5", "G6", "G7", "G8"] },
+    { "ref": "GRP4", "title": "④质检", "color": "#EF4444", "members": ["QA"] },
+    { "ref": "GRP5", "title": "⑤返修支线（按需）", "color": "#F97316", "members": ["R", "RG"] },
+    { "ref": "GRP6", "title": "⑥详情页", "color": "#3B82F6", "members": ["X1", "X2"] }
+  ]
+}

@@ -6,7 +6,7 @@
 import json, sys, zipfile
 from pathlib import Path
 
-from build_lxf import load_spec, variant_from_argv
+from build_lxf import load_spec, variant_from_argv, spec_from_argv, OPT_WITH_VALUE
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -15,9 +15,9 @@ BP = HERE.parent / 'blueprints'
 PROMPTS = BP / 'prompts'
 
 _args = sys.argv[1:]
-spec = load_spec(variant_from_argv(_args))
+spec = load_spec(variant_from_argv(_args), spec_from_argv(_args))
 _pos = [a for i, a in enumerate(_args)
-        if not a.startswith('--') and (i == 0 or _args[i - 1] != '--variant')]
+        if not a.startswith('--') and (i == 0 or _args[i - 1] not in OPT_WITH_VALUE)]
 LXF = Path(_pos[0]) if _pos else HERE.parent.parent / spec['output_file']
 CHAT_D, IMAGE_D = spec['defaults']['chat'], spec['defaults']['image']
 

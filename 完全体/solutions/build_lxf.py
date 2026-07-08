@@ -27,9 +27,10 @@ CHAT_DEFAULT = {}
 IMAGE_DEFAULT = {}
 
 
-def load_spec(variant=None):
-    """读蓝图；variant 非空时套用 spec['variants'][variant] 的覆盖（标题/promptFile/输出名）。"""
-    spec = json.loads((BP / "workflow_spec.json").read_text(encoding="utf-8"))
+def load_spec(variant=None, spec_file=None):
+    """读蓝图；spec_file 可指定其他产品线（如 workflow_spec_v11.json）；
+    variant 非空时套用 spec['variants'][variant] 的覆盖（标题/promptFile/输出名）。"""
+    spec = json.loads((BP / (spec_file or "workflow_spec.json")).read_text(encoding="utf-8"))
     if variant:
         v = spec["variants"][variant]
         spec["project_title"] = v.get("project_title", spec["project_title"])
@@ -48,6 +49,13 @@ def load_spec(variant=None):
 
 def variant_from_argv(args):
     return args[args.index("--variant") + 1] if "--variant" in args else None
+
+
+def spec_from_argv(args):
+    return args[args.index("--spec") + 1] if "--spec" in args else None
+
+
+OPT_WITH_VALUE = ("--variant", "--spec", "--project", "--refs", "--box", "--out")
 
 
 def card_content(card):
@@ -78,7 +86,7 @@ def build_data(card):
 
 
 def main():
-    spec = load_spec(variant_from_argv(sys.argv[1:]))
+    spec = load_spec(variant_from_argv(sys.argv[1:]), spec_from_argv(sys.argv[1:]))
     out_lxf = HERE.parent.parent / spec["output_file"]
     project_id = str(uuid.uuid4())
     now = datetime.now(timezone.utc)
