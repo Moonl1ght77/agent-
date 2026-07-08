@@ -1,9 +1,26 @@
 {
   "project_title": "V9.2-服装一致性定制版-8分镜",
+  "output_file": "V9.2定制版8分镜.lxf",
   "app_version": "1.4.3",
   "defaults": {
     "chat": { "model": "gpt-5.5", "provider": "jijing" },
     "image": { "model": "gpt-image-2", "provider": "jijing" }
+  },
+  "variants_note": "变体=同一结构同一护栏，只换分镜表数据与标题（构图定义已数据化到A3，C/QA为单份规则引擎）。构建: py build_lxf.py --variant half",
+  "variants": {
+    "half": {
+      "project_title": "V10-半身特写定制版-8分镜",
+      "output_file": "V10半身特写版8分镜.lxf",
+      "promptFiles": { "A3": "A3_场景八分镜_半身.txt" },
+      "titles": {
+        "A3": "A3·场景与八分镜官（半身特写版）",
+        "G1": "G1·正面半身版型位（主图1）",
+        "G2": "G2·背面半身位（主图2）",
+        "G3": "G3·正面近景细节位·刺绣主力（主图3）",
+        "G4": "G4·正面下摆互动位（主图4）",
+        "G8": "G8·生活场景位D（头到大腿稍远）"
+      }
+    }
   },
   "cards": [
     { "ref": "DOC1", "type": "sticky_note", "title": "①使用说明与硬规则（先读我）", "x": -950, "y": -700, "w": 460, "h": 720, "promptFile": "DOC1_使用说明.txt" },

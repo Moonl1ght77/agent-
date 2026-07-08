@@ -15,6 +15,8 @@ import sys
 import urllib.request
 from pathlib import Path
 
+from build_lxf import load_spec, variant_from_argv
+
 HERE = Path(__file__).resolve().parent
 BP = HERE.parent / "blueprints"
 PROMPTS = BP / "prompts"
@@ -41,9 +43,8 @@ def card_content(card):
 
 
 def main():
-    spec = json.loads((BP / "workflow_spec.json").read_text(encoding="utf-8"))
-
     args = sys.argv[1:]
+    spec = load_spec(variant_from_argv(args))
     pid = None
     only_refs = None
     if "--project" in args:
@@ -68,7 +69,9 @@ def main():
         print(f"热更新成功: {sorted(only_refs)} -> 项目 {pid}")
         return
 
-    title = args[0] if args and not args[0].startswith("--") else spec["project_title"]
+    pos = [a for i, a in enumerate(args)
+           if not a.startswith("--") and (i == 0 or args[i - 1] not in ("--variant", "--project", "--refs"))]
+    title = pos[0] if pos else spec["project_title"]
     proj = api(base, token, "POST", "/projects", {"title": title})
     pid = proj["id"]
     print(f"已建项目: {title}  id={pid}")

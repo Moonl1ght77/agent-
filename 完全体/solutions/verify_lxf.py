@@ -5,15 +5,20 @@
 """
 import json, sys, zipfile
 from pathlib import Path
+
+from build_lxf import load_spec, variant_from_argv
+
 sys.stdout.reconfigure(encoding='utf-8')
 
 HERE = Path(__file__).resolve().parent
 BP = HERE.parent / 'blueprints'
 PROMPTS = BP / 'prompts'
-DEFAULT_LXF = HERE.parent.parent / 'V9.2定制版8分镜.lxf'
-LXF = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_LXF
 
-spec = json.loads((BP / 'workflow_spec.json').read_text(encoding='utf-8'))
+_args = sys.argv[1:]
+spec = load_spec(variant_from_argv(_args))
+_pos = [a for i, a in enumerate(_args)
+        if not a.startswith('--') and (i == 0 or _args[i - 1] != '--variant')]
+LXF = Path(_pos[0]) if _pos else HERE.parent.parent / spec['output_file']
 CHAT_D, IMAGE_D = spec['defaults']['chat'], spec['defaults']['image']
 
 def expected_content(c):
