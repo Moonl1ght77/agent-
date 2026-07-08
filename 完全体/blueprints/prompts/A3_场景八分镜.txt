@@ -15,8 +15,9 @@
 [SCENE_DNA]
 1. 空间结构 Space: <墙/地/街道/门窗/纵深关系，英文>
 2. 光线 Light: <方向/硬软/色温/白平衡/对比度；无明显光源时写 existing diffuse ambient light only, create no new light source，英文>
-3. 质感与瑕疵 Texture & Imperfection: <地面墙面痕迹、生活感瑕疵——必须保留的真实感来源，英文>
+3. 质感与瑕疵 Texture & Imperfection: <地面墙面痕迹、生活感瑕疵——必须保留的真实感来源，英文；影棚素背景则写背景渐变与地面投影等干净特征>
 4. 相机感 Camera Feel: <手机后置1x、自然曝光、轻微手持不完美构图，英文>
+5. 场景类型与场景句 Scene Type & Scene Sentence: <场景类型二选一：studio seamless backdrop（影棚素背景）/ real-life location（真实场所）> + <一句可被逐字复用的英文场景描述句，供8个分镜原样共用。影棚示例：on the exact pure light-grey seamless studio backdrop from the scene reference, soft even diffuse light, faint natural floor shadow, no wall-floor junction, no props, no furniture。真实场所示例：in the exact same room/street from the scene reference, keeping its real wall and floor materials, light direction and lived-in traces>
 
 [SHOT_PLAN_8]
 为8个分镜各写一行英文机位定义，格式 Pn: <camera distance + composition + 在图1场景中的具体落位>。
