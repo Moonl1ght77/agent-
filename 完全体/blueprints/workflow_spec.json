@@ -1,5 +1,5 @@
 {
-  "project_title": "V9.1-服装一致性定制版-8分镜",
+  "project_title": "V9.2-服装一致性定制版-8分镜",
   "app_version": "1.4.3",
   "defaults": {
     "chat": { "model": "gpt-5.5", "provider": "jijing" },
@@ -16,6 +16,8 @@
     { "ref": "IN4", "type": "ai_image", "title": "输入图4·场景参考原图（替换成你的）", "x": -380, "y": 440, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "e2d54e28-24fb-4552-90e3-e97b305449b5.jpg" },
     { "ref": "IN5", "type": "ai_image", "title": "输入图5·姿势动作参考（供G5生活位）", "x": -380, "y": 820, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "8cbd5997-9551-4f81-bdb4-9f7da8499319.jpg" },
     { "ref": "IN6", "type": "ai_image", "title": "输入图6·搭配单品白底图（替换成你的）", "x": -380, "y": 1200, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "8cbd5997-9551-4f81-bdb4-9f7da8499319.jpg" },
+    { "ref": "IN7", "type": "ai_image", "title": "输入图7·背面商品图（无背面需求放主商品图副本）", "x": -380, "y": 1580, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "IN8", "type": "ai_image", "title": "输入图8·版型上身参考（只供A1分析，不进生图）", "x": -380, "y": 1960, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "c1d90779-27b9-468d-9c79-b2b54ce2cc5f.jpg" },
 
     { "ref": "S1", "type": "ai_image", "title": "S1·场景清洗（去人去水印）", "x": 40, "y": 440, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "medium" }, "promptFile": "S1_场景清洗.txt" },
 
@@ -37,7 +39,7 @@
     { "ref": "G1", "type": "ai_image", "title": "G1·正面全身版型位（主图1）", "x": 2060, "y": -1080, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "high" }, "content": " " },
     { "ref": "G2", "type": "ai_image", "title": "G2·背面全身位（主图2）", "x": 2060, "y": -695, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "high" }, "content": " " },
     { "ref": "G3", "type": "ai_image", "title": "G3·正面近景位（主图3）", "x": 2060, "y": -310, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "high" }, "content": " " },
-    { "ref": "G4", "type": "ai_image", "title": "G4·左45°侧身位（主图4）", "x": 2060, "y": 75, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "high" }, "content": " " },
+    { "ref": "G4", "type": "ai_image", "title": "G4·正面下摆互动位（主图4）", "x": 2060, "y": 75, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "high" }, "content": " " },
     { "ref": "G5", "type": "ai_image", "title": "G5·生活场景位A（姿势参考）", "x": 2060, "y": 460, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "high" }, "content": " " },
     { "ref": "G6", "type": "ai_image", "title": "G6·生活场景位B", "x": 2060, "y": 845, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "high" }, "content": " " },
     { "ref": "G7", "type": "ai_image", "title": "G7·生活场景位C", "x": 2060, "y": 1230, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "1K", "quality": "high" }, "content": " " },
@@ -50,11 +52,11 @@
     { "ref": "X1", "type": "ai_image", "title": "X1·四宫格细节图", "x": 3070, "y": -280, "w": 255, "h": 340, "data": { "size": "1:1", "resolution": "1K", "quality": "high" }, "promptFile": "X1_四宫格细节.txt" },
     { "ref": "X2", "type": "ai_image", "title": "X2·详情页首屏（9:16）", "x": 3070, "y": 140, "w": 255, "h": 340, "data": { "size": "9:16", "resolution": "1K", "quality": "high" }, "promptFile": "X2_详情页首屏.txt" }
   ],
-  "connections_note": "顺序即参考图槽位。生图卡统一：槽1模特/槽2商品/槽3细节/槽4搭配单品(IN6)/槽5场景/(仅G5)槽6姿势，文本最后连。",
+  "connections_note": "顺序即参考图槽位。生图卡统一：槽1模特/槽2商品/槽3细节/槽4搭配单品(IN6)/槽5场景/(仅G2)槽6背面商品图(IN7)/(仅G5)槽6姿势(IN5)，文本最后连。IN7只连A1/G2/QA；IN8只连A1（版型证据不进生图，防身份污染）。",
   "connections": [
     ["IN4", "S1"],
 
-    ["IN2", "A1"], ["IN3", "A1"], ["REQ1", "A1"], ["REQ2", "A1"],
+    ["IN2", "A1"], ["IN3", "A1"], ["IN7", "A1"], ["IN8", "A1"], ["REQ1", "A1"], ["REQ2", "A1"],
     ["IN1", "A2"], ["IN6", "A2"], ["REQ2", "A2"],
     ["S1", "A3"], ["IN5", "A3"], ["REQ1", "A3"],
 
@@ -64,7 +66,7 @@
     ["C", "P1"], ["C", "P2"], ["C", "P3"], ["C", "P4"], ["C", "P5"], ["C", "P6"], ["C", "P7"], ["C", "P8"],
 
     ["IN1", "G1"], ["IN2", "G1"], ["IN3", "G1"], ["IN6", "G1"], ["S1", "G1"], ["P1", "G1"],
-    ["IN1", "G2"], ["IN2", "G2"], ["IN3", "G2"], ["IN6", "G2"], ["S1", "G2"], ["P2", "G2"],
+    ["IN1", "G2"], ["IN2", "G2"], ["IN3", "G2"], ["IN6", "G2"], ["S1", "G2"], ["IN7", "G2"], ["P2", "G2"],
     ["IN1", "G3"], ["IN2", "G3"], ["IN3", "G3"], ["IN6", "G3"], ["S1", "G3"], ["P3", "G3"],
     ["IN1", "G4"], ["IN2", "G4"], ["IN3", "G4"], ["IN6", "G4"], ["S1", "G4"], ["P4", "G4"],
     ["IN1", "G5"], ["IN2", "G5"], ["IN3", "G5"], ["IN6", "G5"], ["S1", "G5"], ["IN5", "G5"], ["P5", "G5"],
@@ -72,7 +74,7 @@
     ["IN1", "G7"], ["IN2", "G7"], ["IN3", "G7"], ["IN6", "G7"], ["S1", "G7"], ["P7", "G7"],
     ["IN1", "G8"], ["IN2", "G8"], ["IN3", "G8"], ["IN6", "G8"], ["S1", "G8"], ["P8", "G8"],
 
-    ["IN1", "QA"], ["IN2", "QA"], ["S1", "QA"], ["IN6", "QA"],
+    ["IN1", "QA"], ["IN2", "QA"], ["S1", "QA"], ["IN6", "QA"], ["IN7", "QA"],
     ["G1", "QA"], ["G2", "QA"], ["G3", "QA"], ["G4", "QA"], ["G5", "QA"], ["G6", "QA"], ["G7", "QA"], ["G8", "QA"],
     ["C", "QA"],
 

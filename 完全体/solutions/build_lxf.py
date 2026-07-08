@@ -23,7 +23,7 @@ BP = HERE.parent / "blueprints"
 PROMPTS = BP / "prompts"
 # 示例占位图来源：蓝图自包含资产（随仓库同步，家/公司两机均可构建）
 MEDIA_SRC = BP / "assets"
-OUT_LXF = HERE.parent.parent / "V9.1定制版8分镜.lxf"
+OUT_LXF = HERE.parent.parent / "V9.2定制版8分镜.lxf"
 
 CHAT_DEFAULT = {}
 IMAGE_DEFAULT = {}
