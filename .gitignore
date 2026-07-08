@@ -1,0 +1,14 @@
+# Local runtime/cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local secrets and machine-specific config
+.env
+.env.*
+agent.json
+
+# Temporary outputs
+scratchpad/
+tmp/
+*.log

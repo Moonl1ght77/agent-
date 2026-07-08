@@ -1,0 +1,11 @@
+Based on the garment reference images (Image 1 = main product, Image 2 = product detail close-up) and the upstream [GARMENT_DNA] fact card, generate a four-panel (4-grid) clothing detail image for an e-commerce product detail page.
+
+Strict requirements:
+1. Layout: four separate detail panels in a clean four-grid layout, clear white spacing between panels, minimal e-commerce composition.
+2. Detail content: each panel shows ONLY a close-up detail of the garment; do NOT show the full garment in any panel. Choose four different details guided by [GARMENT_DNA] construction and trims facts, such as: fabric texture close-up, neckline/cuff/hem construction, stitching or edge finishing, buttons/zippers/drawcords, logo or label close-up.
+3. Fact lock: colors must match the locked color exactly. Any logo, lettering, or label must be reproduced letter-for-letter as transcribed in [GARMENT_DNA], with correct geometry — no stretching, warping, distortion, or re-design. Stripes or checks must keep true direction and width.
+4. Placement & background: all details flat-laid on a pure white background, garment sections laid naturally, not folded, not compressed, no hangers, models, hands, or props.
+5. Visual style: realistic commercial fabric photography, soft even lighting, accurate colors and textures, no artistic filters.
+6. Strictly forbidden: full garment shots, folded clothing, added text/watermarks/borders, color changes, design alterations, invented details not present in the references.
+
+Goal: a clean professional four-panel detail image that highlights true craftsmanship and material quality of this exact garment.

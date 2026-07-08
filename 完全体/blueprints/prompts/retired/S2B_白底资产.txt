@@ -1,0 +1,18 @@
+Use the upstream text as the exact item list.
+
+Generate a clean 3:4 white-background styling asset image containing only the items explicitly described in the upstream text.
+
+Do not add, remove, replace, infer, redesign, or invent any object.
+
+Presentation:
+Clean white or warm off-white background.
+Flat-lay or tabletop styling.
+Soft natural shadow.
+Realistic material texture.
+Clean spacing.
+Modern fast-fashion social-commerce styling asset.
+
+Do not show:
+Human body. Model. Face. Hands. Feet wearing shoes. Mannequin. Poster. Catalog. Text. Logo. Watermark. Brand mark. Lifestyle scene.
+
+Output one clean 3:4 white-background styling asset image only.

@@ -1,0 +1,16 @@
+Generate one 9:16 e-commerce product detail-page first-screen layout image for this exact garment.
+
+Input roles: Images 1-3 = approved model-worn photos of the product (hero candidates). Image 4 = main product reference (highest product truth). Image 5 = four-panel fabric detail grid. Upstream text [GARMENT_DNA] = locked product facts.
+
+Layout requirements:
+1. Top 60%: one hero model-worn photo area based on the strongest worn photo — keep the model, pose, garment, colors, and scene exactly as shown in the source photo; do not redesign the person or the product.
+2. Bottom 40%: a clean modular area combining one secondary worn photo and fabric/construction detail panels from Image 5, arranged with generous white spacing.
+3. The garment in every module must stay strictly faithful to Image 4 and [GARMENT_DNA]: exact color, silhouette, construction; logos and lettering letter-for-letter with undistorted geometry.
+4. Modern minimal social-commerce detail page mood: white or very light neutral background between modules, soft even lighting inside modules, clean grid alignment.
+
+Strictly forbidden:
+- Any generated text, headlines, slogans, price tags, buttons, badges, or watermarks (all copy will be added later in design software — leave clean negative space where a headline would sit, top-left of the hero area).
+- Collage clutter, overlapping cutouts, drop shadows on cutout edges, borders.
+- Changing garment color/design, inventing new product views, beautifying the model.
+
+Output one clean 9:16 detail-page first-screen layout image only.
