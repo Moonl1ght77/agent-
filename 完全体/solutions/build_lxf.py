@@ -7,8 +7,10 @@ build_lxf.py —— DBS Solutions 层：读取 blueprints 蓝图，生成 LumaX 
   manifest.json  元信息与计数
   media/images/  输入卡示例占位图（用户导入后替换）
 
-用法：  py build_lxf.py [--variant half]   （或任意 Python 3.11+）
-输出：  仓库根目录\\<spec.output_file>（相对本文件定位，异地可用；变体见 spec.variants）
+用法：  py build_lxf.py [--spec xxx.json] [--variant half|b]   （或任意 Python 3.11+）
+输出：  仓库根目录\\<spec.output_file>（相对本文件定位，异地可用）
+变体：  spec.variants[名] 支持覆盖 project_title/output_file/promptFiles/titles，
+        以及 removeCards（删卡并级联删除其连线、清出分组）——模式类变体用。
 """
 import json
 import shutil
@@ -41,6 +43,14 @@ def load_spec(variant=None, spec_file=None):
                 c["promptFile"] = pf[c["ref"]]
             if c["ref"] in tt:
                 c["title"] = tt[c["ref"]]
+        rm = set(v.get("removeCards", []))
+        if rm:
+            spec["cards"] = [c for c in spec["cards"] if c["ref"] not in rm]
+            spec["connections"] = [p for p in spec["connections"]
+                                   if p[0] not in rm and p[1] not in rm]
+            for g in spec["groups"]:
+                g["members"] = [m for m in g["members"] if m not in rm]
+            spec["groups"] = [g for g in spec["groups"] if g["members"]]
     global CHAT_DEFAULT, IMAGE_DEFAULT
     CHAT_DEFAULT = spec["defaults"]["chat"]
     IMAGE_DEFAULT = spec["defaults"]["image"]
