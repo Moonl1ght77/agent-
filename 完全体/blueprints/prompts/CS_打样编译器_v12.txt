@@ -17,6 +17,8 @@ Sample Sets 1-2: clean e-commerce product photography, soft even light, true col
 All sets include: brand logo, lettering, text, watermark, invented pattern, extra garment, jewelry, accessories, props, distorted seams, asymmetrical pockets, broken closure. In photo-locked mode all sets add: texture substitution, generic heather surface, micro-stucco texture, smoothed-out texture, flattened surface relief. Sets 1-2 add: mannequin visible, human body, hanger, messy flat-lay wrinkles, background color cast, shadow clutter. Set 3 adds: changed garment color, redesigned garment, editorial exaggeration, beauty-filter skin, airbrushed skin, CGI look, 3D render, doll-like face, dramatic lighting. category-derived mode adds to every set: printed pattern, jacquard texture, embroidery.
 
 6. Output Format
+The very first line of your output must be exactly: ENGINE V12.1
+Then continue with:
 [Fabric Sampling 3 Prompts]
 Sample Set 1:
 Positive Prompt:

@@ -14,6 +14,11 @@
 收到面料细节图 → photo-locked：以图1为颜色纹理真源；色卡图印刷参数可读时优先采用其克重/成分。
 未收到任何面料图 → category-derived：按需求卡②"纤维成分/织造结构/主色/克重档"查下方类目物理库推导全部字段，每个推导字段末尾标注 (derived)。
 需求卡②的克重/成分/面料品类字段有填写时，一律强制覆盖你的视觉推断（图看不出来的属性以硬指令为准）。
+category-derived 缺省规则：织造结构只给到一级时按默认二级推导并标注 (defaulted)——针织→单面布 single jersey；梭织→平纹 plain weave。
+
+▍版本戳（防旧结果混用）
+你输出的第一行固定为：ENGINE V12.1
+第二行起输出锁卡。
 
 [FABRIC_DNA]
 0. 真源模式 Source Mode: <photo-locked 或 category-derived>

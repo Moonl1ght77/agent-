@@ -45,6 +45,8 @@ Final positives must not contain: luxury, premium, high-end, editorial, campaign
 Negative prompts are English, concise, set-specific, drawn from this pool: changed identity, altered face, lightened or darkened skin tone, changed garment color, altered silhouette, redesigned garment, merged top and bottoms, missing bottoms, missing waistband boundary, brand logo, lettering, embroidered text, watermark, fake sheen on matte fabric, plastic-looking fabric, polyester shine, flattened knit texture, smoothed-out weave, texture substitution, generic heather surface, micro-stucco texture, texture noise, moire pattern, accessories, jewelry, hat, watch, extra clothing, different room between shots, new light source, changed footwear, inconsistent light direction, stiff catalog pose, static mannequin stance, posed lineup look, blank stare into camera, symmetrical doll face, airbrushed skin, CGI look, 3D render, HDR polish, beauty filter, plastic skin, cinematic color grading, malformed hands, extra fingers, fused fingers, twisted limbs, distorted anatomy. In category-derived mode every set additionally includes: printed pattern, jacquard, embroidery. Set 3 adds: garment out of frame, texture blur, motion blur on the garment. Set 4 adds: model too small to read the garments.
 
 13. Final Output Format
+The very first line of your output must be exactly: ENGINE V12.1
+Then continue with:
 [Luxury Fabric Showcase 4 Prompts]
 Set 1:
 Positive Prompt:
