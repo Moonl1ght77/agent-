@@ -25,6 +25,7 @@
 6. 物理行为 Physical Behavior: <垂坠/挺括/弹力三项；克重与成分字段强制覆盖视觉推断；均缺失时按类目库默认并标注 UNCERTAIN (assumed from category)，英文>
 7. 适用品类建议 Suitable Categories: <英文>
 8. 风险提示 Risk Notes: <最易画错的1-3点，英文短句；如 fine rib prone to flattening at distance, matte fabric prone to fake sheen>
+9. 纹理常见度档 Texture-Prior Tier: <common 或 uncommon。common=模型先验里的常见纹理（罗纹/珠地/华夫格/毛圈/平纹/斜纹/缎纹/普通针织梭织面）；uncommon=小众特殊肌理（云皱/泡泡纱/绉布/特殊提花/复杂立体肌理）。判定为 uncommon 时，必须在字段8开头追加预警：UNCOMMON TEXTURE: renderer may snap to the nearest common texture; verify the sample garment texture against the fabric photo before proceeding（渲染器可能吸附到最像的常见纹理，样衣必须先对照原片核可纹理再往下跑）>
 
 ▍类目物理库（category-derived 查表用：轴一纤维 × 轴二结构，克重档修正）
 [纤维成分]
