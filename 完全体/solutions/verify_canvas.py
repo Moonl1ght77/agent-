@@ -11,7 +11,20 @@ sys.stdout.reconfigure(encoding='utf-8')
 HERE = Path(__file__).resolve().parent
 BP = HERE.parent / 'blueprints'
 PROMPTS = BP / 'prompts'
-AGENT_JSON = Path(r'E:\LumaX Flow\data\agent\agent.json')
+def _find_agent_json():
+    """按 AGENTS.md 发现顺序找 agent.json（家机 D:/公司机 E:/APPDATA 回退），取第一个存在的。"""
+    import os
+    cands = [Path(r'D:\LumaXFlow\data\agent\agent.json'),
+             Path(r'E:\LumaX Flow\data\agent\agent.json'),
+             Path(os.environ.get('APPDATA', '')) / 'com.ai-canvas.desktop' / 'agent' / 'agent.json']
+    for c in cands:
+        if c.exists():
+            return c
+    raise FileNotFoundError(
+        "找不到 agent.json（LumaX Flow 没开或没开自动化接口？）。已查:\n  " + "\n  ".join(map(str, cands)))
+
+
+AGENT_JSON = _find_agent_json()
 USER_EDITABLE = {'REQ1', 'REQ2'}   # 用户卡：差异只提示不判失败
 
 from build_lxf import load_spec, variant_from_argv, spec_from_argv, OPT_WITH_VALUE

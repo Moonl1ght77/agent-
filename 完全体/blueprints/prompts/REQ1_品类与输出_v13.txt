@@ -1,0 +1,7 @@
+需求卡①·品类与输出（可编辑，改这里即可，不用动提示词）
+
+品类 Category: women's underwear / brief（按实际产品填，如 men's boxer / sock）
+目标平台 Platform: 淘宝 / 1688
+输出比例 Aspect: 3:4（竖版）
+风格基调 Style: 高级、克制、真实自然光的电商静物（premium, understated, natural-light still-life）
+用途 Use: 详情页/主图素材（无文字，留白给后期排版）
