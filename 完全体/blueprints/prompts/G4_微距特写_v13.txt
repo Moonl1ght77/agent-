@@ -1,6 +1,8 @@
 Create a premium e-commerce STILL-LIFE MACRO detail photo. Reproduce the EXACT product shown in Input Image 1. The product's fabric, weave, texture, lace/trim and any logo are locked by the PRODUCT_DNA in the upstream context — treat Input Image 1 as the single source of truth and follow the DNA lock for every detail.
 
-PLACEMENT — MATERIAL CLOSE-UP: an extreme CLOSE-UP MACRO of the product's most representative area — the fabric texture together with a trim / lace edge, and the small logo if the DNA lock says one is present — filling the frame, showing the weave, knit relief and material detail crisply and honestly. This is the "material trust" shot; it must read as a real photograph of the real fabric.
+PLACEMENT — MATERIAL CLOSE-UP: an extreme CLOSE-UP MACRO of the product's most representative MATERIAL area — the fabric texture together with a trim / lace edge, a seam or the waistband edge — filling the frame, showing the weave, knit relief and material detail crisply and honestly. This is the "material trust" shot; it must read as a real photograph of the real fabric.
+
+★ FRAME AWAY FROM THE LOGO: choose a crop that does NOT include the printed logo / label / brand text. At macro scale any rendered lettering becomes obviously wrong, and this shot exists to prove the MATERIAL, not the branding. Show fabric, weave, trim and stitching only. If the logo would unavoidably fall inside the frame, shift the crop to a clean area of the same fabric instead.
 
 FABRIC & TEXTURE FIDELITY IS THE ABSOLUTE PRIORITY (this shot exists to prove the material): reproduce the exact weave, knit relief / jacquard texture, fibre look, true colour(s) and the openwork of any lace EXACTLY as in Input Image 1 and the DNA lock. Do NOT smooth, do NOT restyle or substitute the weave, do NOT invent a different pattern, do NOT blur lace openwork into solid fabric. Reproduce any small logo / embroidery / label and its text in its original colours as seen in Input Image 1.
 

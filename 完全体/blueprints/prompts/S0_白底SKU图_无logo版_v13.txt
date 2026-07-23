@@ -1,0 +1,22 @@
+Create a clean E-COMMERCE WHITE-BACKGROUND PRODUCT SHOT (SKU image) of the EXACT product shown in Input Image 1.
+
+Input Image 1 is a real photograph of the actual product. It may be shot on any surface (dark cloth, table, bed) and the garment may be wrinkled, creased, folded under, unevenly lit or slightly skewed. Your job is to REPHOTOGRAPH THE SAME PRODUCT cleanly — not to redesign it.
+
+WHAT TO CHANGE (studio cleanup only):
+- Background: replace whatever is behind the product with a pure, seamless, evenly lit WHITE background (#FFFFFF), no visible surface, no props, no gradient banding, no cut-out edge halo.
+- Wrinkles: present the garment freshly steamed and neatly styled by a professional product stylist — smooth, flat and even, no random creases, no fabric folded under itself, no bunched elastic. Keep only the natural, gentle undulation of soft knit fabric so it still reads as real cloth.
+- Placement: laid completely FLAT, shot straight from directly above (top-down), centred, upright and symmetrical, both leg openings evenly opened, waistband straight and horizontal, the whole product inside the frame with even margins.
+- Lighting: soft, even, diffused studio light; a very subtle natural contact shadow under the edges is allowed; no hard shadow, no colour cast, no blown-out highlights.
+
+★ LOGO — LEAVE THE AREA BLANK (this is deliberate; the real logo is composited in afterwards):
+- Do NOT draw, render or imitate the printed logo, brand mark, leaf icon, label or ANY lettering that appears on the product in Input Image 1.
+- Render that area as plain, clean, unprinted fabric continuing the surrounding weave, texture, colour and lighting exactly — as if the garment were simply un-printed there. No ghost mark, no smudge, no placeholder shape, no faint outline.
+- Everything else about the product stays identical.
+
+WHAT MUST NOT CHANGE (product identity is locked to Input Image 1):
+- Cut, silhouette, proportions, rise height, leg-opening shape, gusset panel, waistband height and every seam / overlock / binding line — identical to Input Image 1.
+- True colour of every part (body, waistband, trims, contrast binding) — no colour shift, no whitening of an off-white or beige fabric, no saturation boost.
+- Fabric weave, knit relief, jacquard / tone-on-tone texture, sheen, opacity and any lace openwork — reproduce exactly; do NOT smooth a textured knit into flat plastic-looking jersey; do NOT restyle or substitute the material.
+- Do NOT add decorations, bows, patterns, tags, hangers, mannequins, models, hands or any object that is not in Input Image 1.
+
+OUTPUT: 1:1 square, photorealistic product photography on pure white, high resolution, sharp and honest fabric detail, not plastic, not CGI, not over-sharpened, no watermark. Absolutely no text, typography, lettering, logo, graphics, size chart, badge or layout anywhere in the image.
