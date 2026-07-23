@@ -115,6 +115,54 @@ def _edge_mean(im):
     return [sum(p[i] for p in px) / len(px) for i in range(3)]
 
 
+def _clean_patch(im, ebox, search=2.6):
+    """在 logo 附近找一块同尺寸的干净布料（平整 + 颜色对得上）。
+
+    用它覆盖旧 logo：像素来自同一张图的真实布料，纹理天然连续，零幻觉。
+    比内容识别填充可控——后者在大片纯色区会硬造出缝线包边（实测把腿口包边搬了过来）。
+
+    ★ 必须同时卡颜色：只挑"方差最小"会选中背景墙（它最平整），
+      结果在产品上贴出一块灰方块（G2/G3 实测）。
+    """
+    W, H = im.size
+    w, h = ebox[2] - ebox[0], ebox[3] - ebox[1]
+    cx, cy = (ebox[0] + ebox[2]) // 2, (ebox[1] + ebox[3]) // 2
+
+    ring = im.crop(ebox)
+    b = max(2, w // 12)
+    rp = [p for r in (ring.crop((0, 0, w, b)), ring.crop((0, h - b, w, h)),
+                      ring.crop((0, 0, b, h)), ring.crop((w - b, 0, w, h)))
+          for p in r.getdata()]
+    want = [sum(p[i] for p in rp) / len(rp) for i in range(3)]
+
+    best, best_score = None, None
+    step = max(8, w // 6)
+    for dy in range(-int(h * search), int(h * search) + 1, step):
+        for dx in range(-int(w * search), int(w * search) + 1, step):
+            if abs(dx) < w * 0.9 and abs(dy) < h * 0.9:
+                continue                       # 别取到 logo 自己
+            x0, y0 = cx + dx - w // 2, cy + dy - h // 2
+            if x0 < 0 or y0 < 0 or x0 + w > W or y0 + h > H:
+                continue
+            c = im.crop((x0, y0, x0 + w, y0 + h))
+            # 缩略图别缩太狠：干花细枝、缝线这类细结构会被平均掉，方差看不出来（G3 实测取到干花）
+            sm = c.resize((max(8, w // 4), max(8, h // 4)), Image.LANCZOS)
+            px = list(sm.getdata())
+            n = len(px)
+            mean = [sum(p[i] for p in px) / n for i in range(3)]
+            cdiff = max(abs(mean[i] - want[i]) for i in range(3))
+            if cdiff > 10:                 # 颜色对不上=不是同一块布，直接淘汰
+                continue
+            # 细线/异物重罚但不硬淘汰：布料自身的光影渐变也有十几的偏差，
+            # 设成硬门槛会把所有候选都毙掉（实测三张全部找不到布）
+            maxdev = max(max(abs(p[i] - mean[i]) for i in range(3)) for p in px)
+            var = sum(sum((p[i] - mean[i]) ** 2 for i in range(3)) for p in px) / n
+            score = var + cdiff ** 2 * 6 + max(0, maxdev - 16) ** 2 * 4
+            if best_score is None or score < best_score:
+                best, best_score = (x0, y0), score
+    return best
+
+
 def paste(target_path, logo_src_path, out_path, scale=1.24, erase_pad=0.62, rotate=0.0):
     tgt = Image.open(target_path).convert("RGB")
     W, H = tgt.size
