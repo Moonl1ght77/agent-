@@ -115,7 +115,7 @@ def _edge_mean(im):
     return [sum(p[i] for p in px) / len(px) for i in range(3)]
 
 
-def paste(target_path, logo_src_path, out_path, scale=1.24, erase_pad=0.62):
+def paste(target_path, logo_src_path, out_path, scale=1.24, erase_pad=0.62, rotate=0.0):
     tgt = Image.open(target_path).convert("RGB")
     W, H = tgt.size
     seed, ctx = color_seed_bbox(tgt)
@@ -158,19 +158,35 @@ def paste(target_path, logo_src_path, out_path, scale=1.24, erase_pad=0.62):
     patch = patch.resize((tw, th), Image.LANCZOS)
     cloth = cloth.resize((tw, th), Image.LANCZOS)
 
-    # 3) 只贴墨迹：alpha = 布料底色比墨迹暗多少。布料处≈0，所以不会贴出色块
+    # 3) 算墨迹 alpha + 把墨迹颜色迁移到目标的布料底色上
+    #    ★ 不能直接贴真源 RGB：半透明边缘会把真源的布料颜色一起带过来，
+    #      真源那块布比目标亮就会在文字周围留一圈白晕（实测穿帮点）。
+    #      改成 目标布色 × 真源透过率，布料区自然等于目标布色，边缘不再发白。
     pl, cw = patch.load(), cloth.load()
     alpha = Image.new("L", (tw, th))
-    al = alpha.load()
+    inkimg = Image.new("RGB", (tw, th))
+    al, ikl = alpha.load(), inkimg.load()
+    tgt_cloth = _edge_mean(tgt.crop(ebox))
     for y in range(th):
         for x in range(tw):
             p, c = pl[x, y], cw[x, y]
             d = max((c[i] - p[i]) / max(c[i], 1) for i in range(3))
             al[x, y] = max(0, min(255, int(d * 340)))
+            ikl[x, y] = tuple(
+                max(0, min(255, int(tgt_cloth[i] * p[i] / max(c[i], 1))))
+                for i in range(3))
+
+    # 旋转对齐试过，已放弃：PCA 主轴对"圆环+文字"这种图形不可靠，估出的角度是错的，
+    # 转完比不转更歪（实测）。真源歪就换一张拍得正的真源，或用 --rotate 手动给角度。
+    if rotate:
+        inkimg = inkimg.rotate(-rotate, Image.BICUBIC, expand=True,
+                               fillcolor=tuple(int(v) for v in tgt_cloth))
+        alpha = alpha.rotate(-rotate, Image.BICUBIC, expand=True, fillcolor=0)
+        tw, th = alpha.size
 
     cx, cy = (tbox[0] + tbox[2]) // 2, (tbox[1] + tbox[3]) // 2
     pos = (cx - tw // 2, cy - th // 2)
-    tgt.paste(patch, pos, alpha)
+    tgt.paste(inkimg, pos, alpha)
     tgt.save(out_path, quality=95)
     return tbox, (tw, th)
 
