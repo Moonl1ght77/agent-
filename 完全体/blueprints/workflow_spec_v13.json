@@ -1,6 +1,6 @@
 {
-  "project_title": "V13-静物场景线-4图（内裤起）",
-  "output_file": "V13静物场景线4图.lxf",
+  "project_title": "V13.1-静物场景线-白底SKU+4摆拍图（内裤起）",
+  "output_file": "V13.1静物场景线_白底SKU加4图.lxf",
   "app_version": "1.4.6",
   "defaults": {
     "chat": { "model": "gpt-5.5", "provider": "jijing" },
@@ -11,7 +11,9 @@
     { "ref": "REQ1", "type": "text", "title": "需求卡①·品类与输出（可编辑）", "x": -950, "y": 240, "w": 420, "h": 240, "promptFile": "REQ1_品类与输出_v13.txt" },
     { "ref": "REQ2", "type": "text", "title": "需求卡②·场景与摆法（可编辑）", "x": -950, "y": 520, "w": 420, "h": 320, "promptFile": "REQ2_场景与摆法_v13.txt" },
 
-    { "ref": "IN1", "type": "ai_image", "title": "IN1·产品白底图（逐配色替换成你的）", "x": -380, "y": 40, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "IN1", "type": "ai_image", "title": "IN1·产品实拍图（逐配色替换成你的）", "x": -380, "y": 40, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+
+    { "ref": "S0", "type": "ai_image", "title": "S0·白底SKU图（实拍→干净白底·1:1·2K）", "x": 80, "y": 40, "w": 255, "h": 340, "data": { "size": "1:1", "resolution": "2K", "quality": "high" }, "promptFile": "S0_白底SKU图_v13.txt" },
 
     { "ref": "A1", "type": "ai_chat", "title": "A1·产品DNA锁定官（面料/纹理/蕾丝/logo）", "x": 540, "y": 40, "w": 380, "h": 320, "promptFile": "A1_产品DNA_v13.txt" },
 
@@ -22,20 +24,23 @@
 
     { "ref": "QA", "type": "ai_chat", "title": "QA·四图质检（保真/形变/摆法）", "x": 1650, "y": 40, "w": 400, "h": 460, "promptFile": "QA_质检四图_v13.txt" }
   ],
-  "connections_note": "无C精简拓扑：A1读产品图出DNA→注入4张G卡；G卡槽1=IN1产品图(唯一图槽)，A1/REQ2作文本上下文注入；QA收IN1(产品事实源)+G1-4(成品)+A1(锁卡)。",
+  "connections_note": "无C精简拓扑+S0白底前置：IN1实拍图→S0出干净白底SKU图(1:1)；A1读IN1实拍原片(纹理真源在原片，不在AI重绘图)出DNA；G卡槽1=S0白底图(唯一图槽)，A1/REQ2作文本注入；QA收IN1(实拍真源)+S0(白底SKU)+G1-4(成品)+A1(锁卡)。",
   "connections": [
+    ["IN1", "S0"], ["REQ1", "S0"],
+
     ["REQ1", "A1"], ["REQ2", "A1"], ["IN1", "A1"],
 
-    ["IN1", "G1"], ["A1", "G1"], ["REQ2", "G1"],
-    ["IN1", "G2"], ["A1", "G2"], ["REQ2", "G2"],
-    ["IN1", "G3"], ["A1", "G3"], ["REQ2", "G3"],
-    ["IN1", "G4"], ["A1", "G4"], ["REQ2", "G4"],
+    ["S0", "G1"], ["A1", "G1"], ["REQ2", "G1"],
+    ["S0", "G2"], ["A1", "G2"], ["REQ2", "G2"],
+    ["S0", "G3"], ["A1", "G3"], ["REQ2", "G3"],
+    ["S0", "G4"], ["A1", "G4"], ["REQ2", "G4"],
 
-    ["IN1", "QA"], ["G1", "QA"], ["G2", "QA"], ["G3", "QA"], ["G4", "QA"], ["A1", "QA"]
+    ["IN1", "QA"], ["S0", "QA"], ["G1", "QA"], ["G2", "QA"], ["G3", "QA"], ["G4", "QA"], ["A1", "QA"]
   ],
   "groups": [
-    { "ref": "GRP1", "title": "①分析·产品锁卡（先查A1再生图）", "color": "#7C3AED", "members": ["A1"] },
-    { "ref": "GRP2", "title": "②四图生图（2K计费·跑前确认）", "color": "#10B981", "members": ["G1", "G2", "G3", "G4"] },
-    { "ref": "GRP3", "title": "③质检", "color": "#EF4444", "members": ["QA"] }
+    { "ref": "GRP0", "title": "①白底SKU图（计费·先出这张并人工核可）", "color": "#F59E0B", "members": ["S0"] },
+    { "ref": "GRP1", "title": "②分析·产品锁卡（先查A1再生图）", "color": "#7C3AED", "members": ["A1"] },
+    { "ref": "GRP2", "title": "③四图摆拍（2K计费·跑前确认）", "color": "#10B981", "members": ["G1", "G2", "G3", "G4"] },
+    { "ref": "GRP3", "title": "④质检", "color": "#EF4444", "members": ["QA"] }
   ]
 }
