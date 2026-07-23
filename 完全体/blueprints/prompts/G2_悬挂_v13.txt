@@ -1,5 +1,23 @@
 Create a premium e-commerce STILL-LIFE product photo. Reproduce the EXACT product shown in Input Image 1. The product's category, cut, colour, fabric, weave, texture, lace/trim and any logo are locked by the PRODUCT_DNA in the upstream context — treat Input Image 1 as the single source of truth and follow the DNA lock for every detail.
 
+★★ ONE SINGLE PHOTOGRAPH — THIS IS A HARD REQUIREMENT.
+Output exactly ONE continuous photographic frame showing the product in ONE single presentation
+(the one this card is responsible for, described under PLACEMENT below).
+NEVER output a grid, a 2x2 collage, split panels, side-by-side comparisons, a contact sheet,
+a detail-page layout, or several shots combined into one image — even though the requirement card
+lists four presentations for the line as a whole. Those four are four SEPARATE images produced by
+four different cards; this card produces only its own one.
+No dividing lines, no borders, no inset thumbnails.
+
+
+INPUT IMAGES (fixed slots):
+- Input Image 1 = the product itself, on a clean white background. This defines the product: cut, silhouette, seams, trims, fabric texture and its printed logo. Reproduce it faithfully.
+- Input Image 2 = a COLOUR REFERENCE photograph of the same product. It is the ONLY trustworthy source of the garment's colour.
+  * Take the colour from Input Image 2. Do NOT take colour from Input Image 1 alone.
+  * Take NOTHING else from Input Image 2 — not its framing, background, props, garment pose, wrinkles or lighting. Colour only. Never output a copy of Input Image 2's composition.
+  * A very pale colour must stay very pale. Do not decide the garment is "pink" or "blue" and paint it more saturated than the reference. Match the PRODUCT_DNA colour values, including its a*/b* direction.
+
+
 PLACEMENT — HANGING DISPLAY: the product displayed HANGING from a small delicate clip / pin / hanger, its front facing the camera, hanging naturally under gentle gravity with the top edge (waistband) up. Keep the product's TRUE flat proportions from Input Image 1 — do NOT stretch it, do NOT over-drape, do NOT invent heavy folds that hide or warp the pattern.
 
 FABRIC & TEXTURE FIDELITY IS THE TOP PRIORITY: reproduce the fabric weave, knit relief / jacquard texture, true colour(s), and every lace / trim edge EXACTLY as in Input Image 1 and the DNA lock. Do NOT smooth a textured or jacquard knit into flat jersey; do NOT restyle or substitute the weave; do NOT change, simplify or invent the pattern; do NOT deform the shape or melt the lace. Keep any openwork lace crisp and continuous. Reproduce any small logo / embroidery / label and its text in its original position, size and colours as seen in Input Image 1.

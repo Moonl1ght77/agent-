@@ -1,5 +1,23 @@
 Create a premium e-commerce STILL-LIFE MACRO detail photo. Reproduce the EXACT product shown in Input Image 1. The product's fabric, weave, texture, lace/trim and any logo are locked by the PRODUCT_DNA in the upstream context — treat Input Image 1 as the single source of truth and follow the DNA lock for every detail.
 
+★★ ONE SINGLE PHOTOGRAPH — THIS IS A HARD REQUIREMENT.
+Output exactly ONE continuous photographic frame showing the product in ONE single presentation
+(the one this card is responsible for, described under PLACEMENT below).
+NEVER output a grid, a 2x2 collage, split panels, side-by-side comparisons, a contact sheet,
+a detail-page layout, or several shots combined into one image — even though the requirement card
+lists four presentations for the line as a whole. Those four are four SEPARATE images produced by
+four different cards; this card produces only its own one.
+No dividing lines, no borders, no inset thumbnails.
+
+
+INPUT IMAGES (fixed slots):
+- Input Image 1 = the product itself, on a clean white background. This defines the product: cut, silhouette, seams, trims, fabric texture and its printed logo. Reproduce it faithfully.
+- Input Image 2 = a COLOUR REFERENCE photograph of the same product. It is the ONLY trustworthy source of the garment's colour.
+  * Take the colour from Input Image 2. Do NOT take colour from Input Image 1 alone.
+  * Take NOTHING else from Input Image 2 — not its framing, background, props, garment pose, wrinkles or lighting. Colour only. Never output a copy of Input Image 2's composition.
+  * A very pale colour must stay very pale. Do not decide the garment is "pink" or "blue" and paint it more saturated than the reference. Match the PRODUCT_DNA colour values, including its a*/b* direction.
+
+
 PLACEMENT — MATERIAL CLOSE-UP: an extreme CLOSE-UP MACRO of the product's most representative MATERIAL area — the fabric texture together with a trim / lace edge, a seam or the waistband edge — filling the frame, showing the weave, knit relief and material detail crisply and honestly. This is the "material trust" shot; it must read as a real photograph of the real fabric.
 
 ★ FRAME AWAY FROM THE LOGO: choose a crop that does NOT include the printed logo / label / brand text. At macro scale any rendered lettering becomes obviously wrong, and this shot exists to prove the MATERIAL, not the branding. Show fabric, weave, trim and stitching only. If the logo would unavoidably fall inside the frame, shift the crop to a clean area of the same fabric instead.
