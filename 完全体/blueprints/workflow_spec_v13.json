@@ -1,6 +1,6 @@
 {
-  "project_title": "V13.1-静物场景线-白底SKU+4摆拍图（内裤起）",
-  "output_file": "V13.1静物场景线_白底SKU加4图.lxf",
+  "project_title": "V13.2-静物场景线-白底SKU+4摆拍图（含logo真源）",
+  "output_file": "V13.2静物场景线_白底SKU加4图.lxf",
   "app_version": "1.4.6",
   "defaults": {
     "chat": { "model": "gpt-5.5", "provider": "jijing" },
@@ -11,7 +11,8 @@
     { "ref": "REQ1", "type": "text", "title": "需求卡①·品类与输出（可编辑）", "x": -950, "y": 240, "w": 420, "h": 240, "promptFile": "REQ1_品类与输出_v13.txt" },
     { "ref": "REQ2", "type": "text", "title": "需求卡②·场景与摆法（可编辑）", "x": -950, "y": 520, "w": 420, "h": 320, "promptFile": "REQ2_场景与摆法_v13.txt" },
 
-    { "ref": "IN1", "type": "ai_image", "title": "IN1·产品实拍图（逐配色替换成你的）", "x": -380, "y": 40, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "IN1", "type": "ai_image", "title": "IN1·产品实拍图（逐配色替换成你的）", "x": -380, "y": -140, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "IN2", "type": "ai_image", "title": "IN2·logo特写图（真源·同配色那张）", "x": -380, "y": 260, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
 
     { "ref": "S0", "type": "ai_image", "title": "S0·白底SKU图（实拍→干净白底·1:1·2K）", "x": 80, "y": 40, "w": 255, "h": 340, "data": { "size": "1:1", "resolution": "2K", "quality": "high" }, "promptFile": "S0_白底SKU图_v13.txt" },
 
@@ -24,18 +25,18 @@
 
     { "ref": "QA", "type": "ai_chat", "title": "QA·四图质检（保真/形变/摆法）", "x": 1650, "y": 40, "w": 400, "h": 460, "promptFile": "QA_质检四图_v13.txt" }
   ],
-  "connections_note": "无C精简拓扑+S0白底前置：IN1实拍图→S0出干净白底SKU图(1:1)；A1读IN1实拍原片(纹理真源在原片，不在AI重绘图)出DNA；G卡槽1=S0白底图(唯一图槽)，A1/REQ2作文本注入；QA收IN1(实拍真源)+S0(白底SKU)+G1-4(成品)+A1(锁卡)。",
+  "connections_note": "无C精简拓扑+S0白底前置+IN2 logo真源：IN1实拍图(槽1)+IN2 logo特写(槽2)→S0出干净白底SKU图(1:1)；A1读IN1实拍原片(纹理真源)+IN2(logo逐字转写真源)出DNA；G卡槽1=S0白底图(唯一图槽，G4微距避开logo故不给IN2)；QA收IN1(实拍真源)+IN2(logo真源)+S0+G1-4+A1。★槽位顺序铁则：IN1必须先于IN2连，提示词图号声明与此一致。",
   "connections": [
-    ["IN1", "S0"], ["REQ1", "S0"],
+    ["IN1", "S0"], ["IN2", "S0"], ["REQ1", "S0"],
 
-    ["REQ1", "A1"], ["REQ2", "A1"], ["IN1", "A1"],
+    ["IN1", "A1"], ["IN2", "A1"], ["REQ1", "A1"], ["REQ2", "A1"],
 
     ["S0", "G1"], ["A1", "G1"], ["REQ2", "G1"],
     ["S0", "G2"], ["A1", "G2"], ["REQ2", "G2"],
     ["S0", "G3"], ["A1", "G3"], ["REQ2", "G3"],
     ["S0", "G4"], ["A1", "G4"], ["REQ2", "G4"],
 
-    ["IN1", "QA"], ["S0", "QA"], ["G1", "QA"], ["G2", "QA"], ["G3", "QA"], ["G4", "QA"], ["A1", "QA"]
+    ["IN1", "QA"], ["IN2", "QA"], ["S0", "QA"], ["G1", "QA"], ["G2", "QA"], ["G3", "QA"], ["G4", "QA"], ["A1", "QA"]
   ],
   "groups": [
     { "ref": "GRP0", "title": "①白底SKU图（计费·先出这张并人工核可）", "color": "#F59E0B", "members": ["S0"] },

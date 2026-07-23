@@ -1,5 +1,9 @@
 Create a clean E-COMMERCE WHITE-BACKGROUND PRODUCT SHOT (SKU image) of the EXACT product shown in Input Image 1.
 
+INPUT IMAGES (fixed slots):
+- Input Image 1 = the full product, real photograph. Compose your output from this image.
+- Input Image 2 = a close-up of the product's logo. **In this variant, IGNORE Input Image 2 completely.** It is only present so the wiring stays identical; the logo is deliberately not rendered here and will be composited in afterwards. Do not draw it, do not use its framing, background or lighting.
+
 Input Image 1 is a real photograph of the actual product. It may be shot on any surface (dark cloth, table, bed) and the garment may be wrinkled, creased, folded under, unevenly lit or slightly skewed. Your job is to REPHOTOGRAPH THE SAME PRODUCT cleanly — not to redesign it.
 
 WHAT TO CHANGE (studio cleanup only):

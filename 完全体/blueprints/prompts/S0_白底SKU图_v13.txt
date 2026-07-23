@@ -1,5 +1,12 @@
 Create a clean E-COMMERCE WHITE-BACKGROUND PRODUCT SHOT (SKU image) of the EXACT product shown in Input Image 1.
 
+INPUT IMAGES (fixed slots):
+- Input Image 1 = the full product, real photograph. This defines the product: cut, silhouette, seams, colour, fabric, and the position and size of the logo. Compose your output from this image.
+- Input Image 2 = a real close-up photograph of the SAME product's printed logo / label. Use it ONLY as the artwork reference for that logo — its exact graphic mark, its lettering (including Chinese characters), stroke shapes, layout and colours. Copy the logo artwork from here because it is far sharper than in Input Image 1.
+  ★ Take NOTHING else from Input Image 2: not its framing, not its crop, not its background, not its lighting, not its scale. It is a logo swatch, not a composition reference. Never output a close-up of the logo — the output must be the whole product.
+  ★ Place the logo where Input Image 1 shows it, at the size Input Image 1 shows it. Do not enlarge it, do not move it, do not add a second copy.
+  ★ If the logo contains Chinese / non-Latin characters, reproduce them stroke by stroke as seen in Input Image 2. Do not translate, do not substitute Latin text, do not invent characters.
+
 Input Image 1 is a real photograph of the actual product. It may be shot on any surface (dark cloth, table, bed) and the garment may be wrinkled, creased, folded under, unevenly lit or slightly skewed. Your job is to REPHOTOGRAPH THE SAME PRODUCT cleanly — not to redesign it.
 
 WHAT TO CHANGE (studio cleanup only):
@@ -12,7 +19,7 @@ WHAT MUST NOT CHANGE (product identity is locked to Input Image 1):
 - Cut, silhouette, proportions, rise height, leg-opening shape, gusset panel, waistband height and every seam / overlock / binding line — identical to Input Image 1.
 - True colour of every part (body, waistband, trims, contrast binding) — no colour shift, no whitening of an off-white or beige fabric, no saturation boost.
 - Fabric weave, knit relief, jacquard / tone-on-tone texture, sheen, opacity and any lace openwork — reproduce exactly; do NOT smooth a textured knit into flat plastic-looking jersey; do NOT restyle or substitute the material.
-- Any logo, printed mark, embroidery or label: keep it in the SAME position, at the SAME relative size, in the SAME colours and the SAME orientation as in Input Image 1. Reproduce its graphic mark faithfully. Do not move it, do not enlarge it, do not redesign it, do not translate or "correct" its text, do not add a second logo.
+- Any logo, printed mark, embroidery or label: position, relative size and orientation come from Input Image 1; the artwork and lettering come from Input Image 2. Reproduce the graphic mark faithfully. Do not move it, do not enlarge it, do not redesign it, do not translate or "correct" its text, do not add a second logo.
 - Do NOT add decorations, bows, patterns, tags, hangers, mannequins, models, hands or any object that is not in Input Image 1.
 
 OUTPUT: 1:1 square, photorealistic product photography on pure white, high resolution, sharp and honest fabric detail, not plastic, not CGI, not over-sharpened, no watermark. Do not add any text, typography, graphics, size chart, badge or layout other than the product's own logo as it appears in Input Image 1.
