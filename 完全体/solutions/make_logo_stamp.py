@@ -56,6 +56,64 @@ def _deskew_angle(mask, span=14.0, step=0.5):
     return best
 
 
+def make_alpha_png(src_path, out_path, pad=0.12, deskew=True):
+    """输出透明底 PNG：只有 logo 墨迹，没有布料。PS 里拖进去直接用，不用管混合模式。
+
+    墨色要从布上「反解」出来，不能直接拿原像素：
+    半透明边缘的像素是 墨×a + 布×(1-a) 混出来的，直接用会带一圈粉色布底。
+    反解公式 color = (像素 - 布色×(1-a)) / a，得到的是纯墨色。
+    """
+    src = Image.open(src_path).convert("RGB")
+    box = _logo_box(src, pad)
+    patch = src.crop(box)
+    mask, cloth = _ink_mask(patch)
+
+    tight = mask.point(lambda v: 255 if v > 150 else 0).getbbox()
+    if tight:
+        m = int(max(tight[2] - tight[0], tight[3] - tight[1]) * 0.06)
+        box = (box[0] + max(0, tight[0] - m), box[1] + max(0, tight[1] - m),
+               box[0] + min(patch.width, tight[2] + m),
+               box[1] + min(patch.height, tight[3] + m))
+        patch = src.crop(box)
+        mask, cloth = _ink_mask(patch)
+
+    angle = _deskew_angle(mask) if deskew else 0.0
+    w, h = patch.size
+    pl, cl, ml = patch.load(), cloth.load(), mask.load()
+    out = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    ol = out.load()
+    # 软阈值：布料织纹的 ink 值约 10-30、褶皱阴影能到 50-80，都必须归零，
+    # 否则透明 PNG 里会带着一整块半透明的布（实测）。墨迹本身远高于 70。
+    lo, hi = 70, 200
+    for y in range(h):
+        for x in range(w):
+            a = ml[x, y]
+            a = 0 if a <= lo else min(255, int((a - lo) / (hi - lo) * 255))
+            if a < 6:                       # 布料，纯透明
+                continue
+            af = a / 255.0
+            p, c = pl[x, y], cl[x, y]
+            col = tuple(max(0, min(255, int((p[i] - c[i] * (1 - af)) / af)))
+                        for i in range(3))
+            ol[x, y] = col + (a,)
+
+    if abs(angle) > 0.25:
+        out = out.rotate(angle, Image.BICUBIC, expand=True)
+    bb = out.getbbox()
+    if bb:
+        out = out.crop(bb)
+    out.save(out_path)
+    return box, angle, out.size
+
+
+def _logo_box(src, pad):
+    seed, ctx = color_seed_bbox(src)
+    if not seed:
+        raise ValueError("没找到 logo（彩色簇）")
+    box = full_logo_bbox(src) or tuple(int(v * ctx[1]) for v in seed)
+    return _expand(box, pad, *src.size)
+
+
 def make_stamp(src_path, out_path, pad=0.12, deskew=True):
     src = Image.open(src_path).convert("RGB")
     seed, ctx = color_seed_bbox(src)
@@ -130,5 +188,7 @@ if __name__ == "__main__":
         pad = float(args[args.index("--pad") + 1]) if "--pad" in args else 0.12
         pos = [a for i, a in enumerate(args)
                if not a.startswith("--") and args[i - 1] != "--pad"]
-        box, angle, size = make_stamp(pos[0], pos[1], pad)
-        print(f"logo 框 {box}  旋正 {angle:+.1f}°  印章 {size[0]}x{size[1]} -> {pos[1]}")
+        fn = make_alpha_png if "--alpha" in args else make_stamp
+        box, angle, size = fn(pos[0], pos[1], pad)
+        kind = "透明PNG" if "--alpha" in args else "印章"
+        print(f"logo 框 {box}  旋正 {angle:+.1f}°  {kind} {size[0]}x{size[1]} -> {pos[1]}")
