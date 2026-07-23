@@ -55,8 +55,13 @@ def color_seed_bbox(im, work=WORK):
     return (min(xs), min(ys), max(xs), max(ys)), (sm, W / w)
 
 
-def full_logo_bbox(im, grow=2.2, dark=0.90):
-    """完整 logo 框（含非彩色小字）。只靠彩色簇会漏掉灰字，擦除不够就留残影（G3 实测）。"""
+def full_logo_bbox(im, grow=1.6, dark=0.86, cap=0.7):
+    """完整 logo 框（含非彩色小字）。只靠彩色簇会漏掉灰字，擦除不够就留残影（G3 实测）。
+
+    ★ 必须夹紧（G1 实测惨案）：画面里比产品更暗的东西（亚麻背景、道具、阴影、缝线）
+      同样满足"暗于布料"，不夹紧就会把背景圈进来，框炸开成一大片，擦除直接把产品抹平。
+      两道保险：搜索窗只在种子框附近；结果按 cap 硬夹在种子框的有限外扩内。
+    """
     seed, ctx = color_seed_bbox(im)
     if not seed:
         return None
@@ -64,21 +69,33 @@ def full_logo_bbox(im, grow=2.2, dark=0.90):
     w, h = sm.size
     px = sm.load()
     sx0, sy0, sx1, sy1 = seed
+    sw, sh = sx1 - sx0, sy1 - sy0
     cx, cy = (sx0 + sx1) / 2, (sy0 + sy1) / 2
-    sw, sh = (sx1 - sx0) * grow, (sy1 - sy0) * grow
-    wx0, wy0 = max(0, int(cx - sw)), max(0, int(cy - sh))
-    wx1, wy1 = min(w, int(cx + sw)), min(h, int(cy + sh))
+    wx0, wy0 = max(0, int(cx - sw * grow)), max(0, int(cy - sh * grow))
+    wx1, wy1 = min(w, int(cx + sw * grow)), min(h, int(cy + sh * grow))
 
-    lum = sorted(sum(px[x, y]) / 3
-                 for y in range(wy0, wy1, 2) for x in range(wx0, wx1, 2))
-    cloth = lum[int(len(lum) * 0.75)]           # 偏亮分位 = 布料本色
+    # 布料本色只从种子框紧邻的一圈取，别用整个搜索窗（窗里可能已经有背景）
+    ring = [sum(px[x, y]) / 3
+            for y in range(max(0, sy0 - 3), min(h, sy1 + 3))
+            for x in (max(0, sx0 - 3), min(w - 1, sx1 + 2))]
+    ring += [sum(px[x, y]) / 3
+             for x in range(max(0, sx0 - 3), min(w, sx1 + 3))
+             for y in (max(0, sy0 - 3), min(h - 1, sy1 + 2))]
+    cloth = sorted(ring)[len(ring) // 2]
+
     xs, ys = [sx0, sx1], [sy0, sy1]
     for y in range(wy0, wy1):
         for x in range(wx0, wx1):
             if sum(px[x, y]) / 3 < cloth * dark:
                 xs.append(x)
                 ys.append(y)
-    return tuple(int(v * k) for v in (min(xs), min(ys), max(xs), max(ys)))
+
+    # 硬夹：无论找到什么，框都不许超过种子框的 cap 倍外扩
+    bx0 = max(min(xs), int(sx0 - sw * cap))
+    by0 = max(min(ys), int(sy0 - sh * cap))
+    bx1 = min(max(xs), int(sx1 + sw * cap))
+    by1 = min(max(ys), int(sy1 + sh * cap))
+    return tuple(int(v * k) for v in (bx0, by0, bx1, by1))
 
 
 def _expand(box, k, W, H):
@@ -107,24 +124,25 @@ def paste(target_path, logo_src_path, out_path, scale=1.24, erase_pad=0.62):
     k = ctx[1]
     tbox = tuple(int(v * k) for v in seed)
 
-    # 1) 擦掉假 logo：实心填布料底色 + 叠回低频光影。滤波法对粗笔画会留残影，别用。
+    # 1) 擦掉假 logo —— 只擦墨迹，不擦矩形。
+    #    矩形硬擦（填底色/滤波）对框大小极敏感：框稍大就把腰头、缝线、产品边缘一起抹平（G1 实测惨案）。
+    #    改成逐像素——只有暗于局部布料的像素才换成布料色，布料本身一个像素不动，框大小不再敏感。
     ebox = _expand(full_logo_bbox(tgt) or tbox, erase_pad, W, H)
     region = tgt.crop(ebox)
     rw, rh = ebox[2] - ebox[0], ebox[3] - ebox[1]
-    base = _edge_mean(region)
-    low = region.filter(ImageFilter.GaussianBlur(rw / 3.5))
-    low_mean = _edge_mean(low)
-    cleaned = Image.new("RGB", (rw, rh))
-    cl, ll = cleaned.load(), low.load()
+    fill = region.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(4))
+    rl, fl = region.load(), fill.load()
+    ink = Image.new("L", (rw, rh))
+    il = ink.load()
     for y in range(rh):
         for x in range(rw):
-            cl[x, y] = tuple(max(0, min(255, int(base[i] + ll[x, y][i] - low_mean[i])))
-                             for i in range(3))
-    # 羽化按短边算：logo 框都是扁的，按宽度算会让羽化吃掉大半个蒙版、中心擦不实
-    em = Image.new("L", (rw, rh), 0)
-    pad = max(2, min(rw, rh) // 14)
-    ImageDraw.Draw(em).rectangle((pad, pad, rw - pad, rh - pad), fill=255)
-    tgt.paste(cleaned, ebox, em.filter(ImageFilter.GaussianBlur(pad / 2.5)))
+            p, c = rl[x, y], fl[x, y]
+            d = max((c[i] - p[i]) / max(c[i], 1) for i in range(3))
+            # 死区要够大：布料织纹的 d 约 0.03-0.08，死区太小会把纹理也算成墨迹，
+            # 于是整个框被轻微提亮、框边界肉眼可见（实测）。logo 墨迹 d 远大于 0.12。
+            il[x, y] = max(0, min(255, int((d - 0.12) * 700)))
+    ink = ink.filter(ImageFilter.MaxFilter(5)).filter(ImageFilter.GaussianBlur(1.5))
+    tgt.paste(fill, ebox, ink)
 
     # 2) 真源里的 logo 贴片 + 它的布料底色（用于算墨迹）
     src = Image.open(logo_src_path).convert("RGB")
@@ -163,11 +181,14 @@ def selfcheck():
     fake, real, out = d / "_pl_fake.jpg", d / "_pl_real.jpg", d / "_pl_out.jpg"
 
     def make(path, ring, stray):
-        """浅色布 + 一个彩色圆环（彩色种子）。
+        """深色背景 + 浅色产品块 + 彩色圆环（彩色种子）。
+        ★ 背景必须比产品暗：这正是 G1 惨案的条件（亚麻背景暗于产品→被当成 logo 圈进框
+          →擦除把产品抹平）。自检不带这个条件就抓不到框炸开的 bug。
         stray=True 再画一条中性灰杠（不满足彩色判据、只能靠"暗于布料"被完整框吃到），
         它只存在于假图里，用来验证擦除真的生效。"""
-        im = Image.new("RGB", (600, 400), (238, 225, 220))
+        im = Image.new("RGB", (600, 400), (150, 140, 130))          # 暗背景
         dr = ImageDraw.Draw(im)
+        dr.rectangle((120, 90, 480, 330), fill=(238, 225, 220))      # 浅色产品
         dr.ellipse((240, 170, 300, 230), outline=ring, width=6)
         if stray:
             dr.rectangle((250, 245, 290, 253), fill=(60, 60, 60))
@@ -184,6 +205,13 @@ def selfcheck():
     # 圆环处必须换成真标的深色墨迹（贴上去了，而不是只擦不贴）
     ring_px = min(res.getpixel((243, 200)), res.getpixel((297, 200)), key=min)
     assert min(ring_px) < 120, f"真 logo 没贴上，圆环处={ring_px}"
+    # ★ 擦除范围不许失控：产品边角必须原样保留（框炸开时这里会被填成纯色）
+    for pt in ((130, 100), (470, 100), (130, 320), (470, 320)):
+        px3 = res.getpixel(pt)
+        assert abs(px3[0] - 238) < 12 and abs(px3[2] - 220) < 12, \
+            f"擦除范围失控，产品边角 {pt} 被改成 {px3}"
+    # 背景也不许被动过
+    assert abs(res.getpixel((30, 30))[0] - 150) < 12, "背景被误擦"
     for f in (fake, real, out):
         f.unlink(missing_ok=True)
     print("selfcheck OK", tbox, size)
