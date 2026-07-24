@@ -1,0 +1,56 @@
+You are RETOUCHING a real product photograph. You are NOT creating a new photo of the products.
+Keep the products exactly as photographed, steam them smooth, and replace the background scene.
+
+INPUT IMAGES (fixed slots):
+- Input Image 1 = a REAL photograph of the actual products, already styled and arranged by the
+  photographer. It contains SEVERAL pieces of the same garment style in DIFFERENT colourways.
+  This is the source of truth for EVERYTHING: how many pieces there are, where each one sits, how
+  each is folded or laid out, its rotation, its scale, its outline, which piece overlaps which.
+- Input Image 2, Input Image 3, Input Image 4 = colour reference photographs, one per colourway,
+  each shot under good light. Use them ONLY to correct the colour of the corresponding piece in
+  Input Image 1 (match each reference to the piece whose colour is closest to it). Take nothing
+  else from them — not their framing, background, props, garment pose or sharpness.
+  * Any of these colour slots may be empty. Ignore the empty ones; never invent a piece to go with
+    a missing reference, and never drop a piece just because its reference is missing.
+  * The number of pieces in the output is decided by Input Image 1 alone, never by how many colour
+    references there are.
+
+★★ DO NOT REDRAW THE PRODUCTS — HARD REQUIREMENT.
+Preserve, pixel for pixel wherever possible: each garment's shape, cut, silhouette, outline, how it
+is folded or laid out, its position and rotation in the frame, its scale, which piece overlaps
+which, every seam, every elastic binding, the fabric's knit texture, and the printed logo including
+every Chinese character in it. Do not restyle, do not re-fold, do not re-pose, do not move or
+rotate or resize any piece, do not change how many pieces there are, do not add or remove a piece,
+do not swap their positions or their stacking order.
+
+★★ SMOOTH THE FABRIC — this is the ONE thing about the garments you must change.
+Present each piece as if it had just been steamed by a product stylist: remove the random surface
+creases, wrinkles and press marks on the fabric faces. Keep only the gentle, natural undulation of
+soft knit cloth so it still reads as real fabric and not as plastic.
+Smoothing means the SURFACE only — it does NOT license you to re-fold or re-arrange: the structural
+folds that define each garment (the turned-back leg-opening bindings, the gusset panel, the way an
+edge is tucked under, the overall three-dimensional shape and outline) all stay exactly as in
+Input Image 1.
+
+★★ THE COLOURWAYS MUST STAY DISTINCT and each must keep its own colour. Never make two pieces the
+same colour, never move a colour from one piece to another.
+
+★★ ONE SINGLE PHOTOGRAPH. Output exactly one continuous photographic frame. Never a grid, collage,
+split panel, side-by-side comparison or detail-page layout. No dividing lines, no borders, no inset
+thumbnails, no captions.
+
+WHAT YOU MAY CHANGE — the scene:
+- Replace the surface the products rest on and everything behind them with a premium still-life
+  setting: soft beige linen or pale wood, gentle diffused daylight from one side.
+- Relight the scene so the light direction and softness read as one coherent photograph, and cast
+  natural soft contact shadows under the products so they sit believably on the new surface.
+- You may add one or two minimal tasteful props (a small sprig of dried flowers, a matte ceramic
+  dish) near the edges of the frame — never overlapping the products.
+- Follow the scene tone given in the requirement card if one is provided.
+
+COLOUR: each garment keeps its true colour as given by its own colour reference. A very pale colour
+must stay pale — do not saturate it, do not whiten it. Do not let the new background's colour cast
+bleed onto the garments.
+
+OUTPUT: photorealistic, natural soft shadows, not plastic, not CGI, not over-sharpened. No
+watermark, no text or graphics other than the products' own printed logos.

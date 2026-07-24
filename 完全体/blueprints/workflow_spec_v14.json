@@ -1,0 +1,41 @@
+{
+  "project_title": "V14-内裤线-白底SKU+成品场景图",
+  "output_file": "V14内裤线_白底SKU加成品场景图.lxf",
+  "app_version": "1.4.6",
+  "defaults": {
+    "chat": { "model": "gpt-5.5", "provider": "jijing" },
+    "image": { "model": "gpt-image-2", "provider": "jijing" }
+  },
+  "cards": [
+    { "ref": "DOC1", "type": "sticky_note", "title": "①使用说明（先读我）", "x": -980, "y": -420, "w": 460, "h": 700, "promptFile": "DOC1_使用说明_v14.txt" },
+    { "ref": "REQ1", "type": "text", "title": "需求卡①·品类与输出（可编辑）", "x": -980, "y": 340, "w": 440, "h": 240, "promptFile": "REQ1_品类与输出_v14.txt" },
+    { "ref": "REQ2", "type": "text", "title": "需求卡②·场景调性（可编辑）", "x": -980, "y": 620, "w": 440, "h": 260, "promptFile": "REQ2_场景调性_v14.txt" },
+
+    { "ref": "IN1", "type": "ai_image", "title": "IN1·产品实拍图（逐配色换）", "x": -400, "y": -260, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+
+    { "ref": "IC1", "type": "ai_image", "title": "IC1·色准图①（颜色唯一真源）", "x": -400, "y": 140, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "IC2", "type": "ai_image", "title": "IC2·色准图②（没有就空着）", "x": -400, "y": 520, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "IC3", "type": "ai_image", "title": "IC3·色准图③（没有就空着）", "x": -400, "y": 900, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+
+    { "ref": "INP", "type": "ai_image", "title": "INP·你摆拍好的多色原图", "x": -400, "y": 1280, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+
+    { "ref": "S0", "type": "ai_image", "title": "S0·白底SKU图（1:1·2K）", "x": 260, "y": -100, "w": 255, "h": 340, "data": { "size": "1:1", "resolution": "2K", "quality": "high" }, "promptFile": "S0_白底SKU图_v14.txt" },
+
+    { "ref": "GS", "type": "ai_image", "title": "GS·成品场景图（3:4·2K）", "x": 260, "y": 780, "w": 255, "h": 340, "data": { "size": "3:4", "resolution": "2K", "quality": "high" }, "promptFile": "GS_成品场景图_v14.txt" },
+
+    { "ref": "QA", "type": "ai_chat", "title": "QA·两图质检（保真/色准/拼贴）", "x": 840, "y": 340, "w": 420, "h": 460, "promptFile": "QA_质检_v14.txt" }
+  ],
+  "connections_note": "两条独立产出线，别的一概砍掉。线A逐配色：IN1实拍图(图1)+IC1色准(图2)→S0白底SKU图。线B整组跑一次：INP摆拍多色原图(图1)+IC1/IC2/IC3三张色准(图2/3/4)→GS成品场景图。★两张生图卡都是**编辑指令不是生成指令**——产品像素当既成事实保留，AI只换背景与光线；这是V13.3实测唯一走通的路子（生成式重画产品必漂logo与颜色）。★槽位铁则：连线顺序=图号顺序，IN1先于IC1；INP先于IC1先于IC2先于IC3；乱动=颜色串到别的裤子上。",
+  "connections": [
+    ["IN1", "S0"], ["IC1", "S0"], ["REQ1", "S0"],
+
+    ["INP", "GS"], ["IC1", "GS"], ["IC2", "GS"], ["IC3", "GS"], ["REQ2", "GS"],
+
+    ["IN1", "QA"], ["IC1", "QA"], ["IC2", "QA"], ["IC3", "QA"], ["INP", "QA"], ["S0", "QA"], ["GS", "QA"]
+  ],
+  "groups": [
+    { "ref": "GRP1", "title": "①白底SKU图（逐配色跑·计费）", "color": "#F59E0B", "members": ["S0"] },
+    { "ref": "GRP2", "title": "②成品场景图（整组跑一次·计费）", "color": "#10B981", "members": ["GS"] },
+    { "ref": "GRP3", "title": "③质检", "color": "#EF4444", "members": ["QA"] }
+  ]
+}

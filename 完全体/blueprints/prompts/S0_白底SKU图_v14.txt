@@ -1,0 +1,46 @@
+You are RETOUCHING a real product photograph into a clean white-background SKU image. You are NOT
+creating a new photo of the product. Keep the product exactly as photographed, steam it smooth, and
+replace the background with pure white.
+
+INPUT IMAGES (fixed slots):
+- Input Image 1 = a REAL photograph of the actual product. It may be shot on any surface (dark
+  cloth, table, bed), the garment may be wrinkled, creased, folded under, unevenly lit or slightly
+  skewed. This is the source of truth for the product: its cut, silhouette, seams, elastic
+  bindings, fabric texture and printed logo.
+- Input Image 2 = a colour reference photograph of the same product, shot under good light. It is
+  the ONLY trustworthy source of COLOUR.
+  * Take the garment's colour from Input Image 2, NOT from Input Image 1 — Input Image 1 is often
+    shot on a dark surface and under-exposed, which washes pale fabrics toward neutral grey.
+  * Take NOTHING else from Input Image 2: not its framing, background, props, garment pose,
+    wrinkles or sharpness. Colour only.
+  * If Input Image 2 is missing, take colour from Input Image 1 and accept it may be off.
+
+★★ DO NOT REDRAW THE PRODUCT — HARD REQUIREMENT.
+Preserve: the cut, silhouette, proportions, rise height, leg-opening shape, gusset panel, waistband
+height, every seam / overlock / binding line, the fabric's knit texture, and the printed logo
+including every Chinese character in it — all exactly as in Input Image 1. Do not redesign, do not
+move or resize the logo, do not translate or "correct" its text, do not add decorations, bows,
+tags, hangers, mannequins, hands or anything not present in Input Image 1.
+
+★★ WHAT YOU MUST CHANGE:
+- Background: replace whatever is behind the product with a pure, seamless, evenly lit WHITE
+  background (#FFFFFF). No visible surface, no props, no gradient banding, no cut-out edge halo.
+- Wrinkles: present the garment freshly steamed — smooth, flat and even, no random surface creases,
+  no fabric folded under itself, no bunched elastic. Keep only the gentle natural undulation of
+  soft knit so it still reads as real cloth, not plastic. Smoothing is SURFACE only: the structural
+  folds that define the garment (turned-back leg-opening bindings, gusset panel, tucked edges) stay.
+- Placement: laid completely FLAT, shot straight from directly above (top-down), centred, upright
+  and symmetrical, both leg openings evenly opened, waistband straight and horizontal, whole
+  product inside the frame with even margins.
+- Lighting: soft, even, diffused studio light; a very subtle contact shadow under the edges is
+  allowed; no hard shadow, no colour cast, no blown-out highlights.
+
+COLOUR: match Input Image 2 exactly. A very pale colour must stay pale — do not saturate it, do not
+whiten an off-white or beige fabric, do not boost saturation.
+
+★★ ONE SINGLE PHOTOGRAPH of ONE piece. Never a grid, collage, split panel, side-by-side comparison
+or detail-page layout. No dividing lines, no borders, no inset thumbnails, no captions.
+
+OUTPUT: 1:1 square, photorealistic product photography on pure white, sharp and honest fabric
+detail, not plastic, not CGI, not over-sharpened. No watermark, no text or graphics other than the
+product's own printed logo as it appears in Input Image 1.

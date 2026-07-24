@@ -1,0 +1,9 @@
+需求卡①·品类与输出（可编辑，改这里即可，不用动提示词）
+
+品类 Category: women's underwear / brief（按实际产品填，如 men's boxer / sock）
+目标平台 Platform: 淘宝 / 1688
+白底SKU图比例 SKU aspect: 1:1（方图，主图用）
+成品场景图比例 Scene aspect: 3:4（竖版，详情页用）
+用途 Use: 主图 + 详情页素材（无文字，留白给后期排版）
+
+特殊要求 Notes: （可留空。例如：某配色腰头偏高需保住 / 某款包边宽度是卖点别画细了）
