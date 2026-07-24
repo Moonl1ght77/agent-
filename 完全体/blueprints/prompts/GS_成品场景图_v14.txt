@@ -40,13 +40,19 @@ split panel, side-by-side comparison or detail-page layout. No dividing lines, n
 thumbnails, no captions.
 
 WHAT YOU MAY CHANGE — the scene:
-- Replace the surface the products rest on and everything behind them with a premium still-life
-  setting: soft beige linen or pale wood, gentle diffused daylight from one side.
-- Relight the scene so the light direction and softness read as one coherent photograph, and cast
-  natural soft contact shadows under the products so they sit believably on the new surface.
-- You may add one or two minimal tasteful props (a small sprig of dried flowers, a matte ceramic
-  dish) near the edges of the frame — never overlapping the products.
-- Follow the scene tone given in the requirement card if one is provided.
+★ THE SCENE IS DEFINED BY THE REQUIREMENT CARD, NOT BY THIS PROMPT.
+  Read the requirement card and build exactly the scene it names — its surface, its light and its
+  props. Follow it literally. If it says "no props", show no props at all. If it names a custom
+  scene, that wins over everything else.
+  Do NOT default to beige linen with dried flowers and ceramic dishes unless the card asks for it —
+  that is one option among many, not the house style. Every run should look like the card says,
+  which means different runs will look genuinely different.
+  Only if the card gives no scene at all: use a plain, neutral pale surface with soft even light
+  and no props.
+- Replace the surface the products rest on and everything behind them with that scene.
+- Relight so the light direction and softness read as one coherent photograph, and cast natural
+  soft contact shadows under the products so they sit believably on the new surface.
+- Any props stay near the edges of the frame and never overlap the products.
 
 COLOUR: each garment keeps its true colour as given by its own colour reference. A very pale colour
 must stay pale — do not saturate it, do not whiten it. Do not let the new background's colour cast
