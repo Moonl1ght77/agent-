@@ -12,3 +12,4 @@ agent.json
 scratchpad/
 tmp/
 *.log
+.superpowers/
