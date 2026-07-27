@@ -93,16 +93,17 @@ touches, softening outward, all shadows falling in the same direction as the key
 the products float. Shadows land on the surface only; they never darken a neighbouring piece's
 colour.
 
-★ THE SCENE IS DEFINED BY THE REQUIREMENT CARD, NOT BY THIS PROMPT.
-  Read the requirement card and build exactly the scene it names — its surface, its light quality and
-  its props. Follow it literally. If it says "no props", show no props at all. If it names a custom
-  scene, that wins.
-  Do NOT default to beige linen with dried flowers and ceramic dishes unless the card asks for it —
-  that is one option among many, not the house style. Different runs must look genuinely different.
-  Only if the card gives no scene at all: use a plain deep-neutral surface, soft directional side
+★ THE SCENE IS CHOSEN UPSTREAM, NOT BY THIS PROMPT.
+  A scene-selector node picks one scene per run and hands you a block headed
+  `SCENE (use this verbatim):`. Build exactly that scene — its surface, its props, its light quality.
+  Follow it literally. If it says "no props", show no props at all.
+  Do NOT default to beige linen with dried flowers and ceramic dishes — that is one option among
+  many, not the house style. Different runs are meant to look genuinely different.
+  Only if no scene block reaches you at all: use a plain deep-neutral surface, soft directional side
   light, no props.
-  The card never overrides the camera, the surface-darker-than-product rule, the lighting rule or the
-  contact-shadow rule — those are fixed above.
+  The scene block never overrides the camera, the composition-depth rule, the
+  surface-darker-than-product rule, the lighting rule or the contact-shadow rule — those are fixed
+  above. If the block mentions any of them, ignore that part.
 
 ★ PROPS CARRY NO REAL BRANDS. Any bottle, tube, jar, book, keyboard or packaging used as a prop must
   show NO real brand name, logo or recognisable trademark (never reproduce DIOR, Jo Malone, Chanel,
