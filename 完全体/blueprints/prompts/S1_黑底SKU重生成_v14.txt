@@ -6,15 +6,16 @@ surface with props around it (blanket, books, bottles, keyboard). The garment in
 the ONLY source of truth for what the product looks like.
 
 ★★ WHAT MUST SURVIVE UNCHANGED — HARD REQUIREMENT.
-  - The exact COLOUR of the fabric. This is a very pale, low-saturation garment. It must stay exactly
-    as pale and exactly as tinted as in the photograph. Do NOT bleach it toward white, do NOT let the
-    dark background drag it darker or grey, do NOT lift or drop its exposure, do NOT saturate it into
-    a definite colour. If the piece is a barely tinted cream, it stays a barely tinted cream.
-    ★ The tint is faint but it IS the product's identity — this style ships in several near-white
-    colourways that differ only by that faint tint. Whatever direction the tint leans in the
-    photograph — cool blue, cool green, warm cream, pink — it leans the same way and by exactly the
-    same amount in the output. A cool blue-tinted piece must still read as cool and blue-tinted.
-    Never neutralise the tint, and never push a cool tint toward warm cream.
+  - The exact COLOUR of the fabric, whatever that colour happens to be in this particular photograph.
+    Read it off the image; do not assume it. Do NOT bleach it toward white, do NOT let the dark
+    background drag it darker or grey, do NOT lift or drop its exposure, do NOT saturate it into a
+    more definite colour than it is.
+    ★ This style ships in a range of low-saturation colourways that differ from each other only by a
+    faint tint, so that faint tint IS the product's identity — losing it turns one colourway into
+    another. Whichever direction the tint leans in this photograph, it leans the same way and by
+    exactly the same amount in the output: as pale as it is, as cool or as warm as it is, as pink or
+    green or blue or brown as it is. Never neutralise it, never shift its hue, never trade a cool
+    tint for a warm one or the reverse.
   - The cut and proportions: waistband height and its exact width, the rise, the leg-opening shape,
     the width of the elastic binding at the leg openings, the gusset panel and its outline, the hip
     curve, the overall silhouette.
@@ -70,7 +71,7 @@ The photographed piece is creased because it was lying on a soft blanket. Relax 
   - No hard vector-sharp outline, no halo, no dark fringe, no bright rim-light outline, no feathered
     edge, no visible selection boundary anywhere along the garment.
   - The edges of the fabric stay soft and slightly fibrous where the knit meets the black, the way a
-    real pale garment photographs against a black sweep.
+    real garment photographs against a black sweep.
   - No shadow is cast on the background — it is a black void, not a surface. Nothing under the
     garment, no reflection, no glow.
 
