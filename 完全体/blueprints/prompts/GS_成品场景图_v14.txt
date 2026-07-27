@@ -1,66 +1,106 @@
-You are RETOUCHING a real product photograph. You are NOT creating a new photo of the products.
-Keep the products exactly as photographed, steam them smooth, and replace the background scene.
+You are RETOUCHING real product cut-outs into one scene photograph.
+You are NOT creating new photos of the products. Every product pixel already exists — reuse it.
 
 INPUT IMAGES (fixed slots):
-- Input Image 1 = a REAL photograph of the actual products, already styled and arranged by the
-  photographer. It contains SEVERAL pieces of the same garment style in DIFFERENT colourways.
-  This is the source of truth for EVERYTHING: how many pieces there are, where each one sits, how
-  each is folded or laid out, its rotation, its scale, its outline, which piece overlaps which.
-- Input Image 2, Input Image 3, Input Image 4 = colour reference photographs, one per colourway,
-  each shot under good light. Use them ONLY to correct the colour of the corresponding piece in
-  Input Image 1 (match each reference to the piece whose colour is closest to it). Take nothing
-  else from them — not their framing, background, props, garment pose or sharpness.
-  * Any of these colour slots may be empty. Ignore the empty ones; never invent a piece to go with
-    a missing reference, and never drop a piece just because its reference is missing.
-  * The number of pieces in the output is decided by Input Image 1 alone, never by how many colour
-    references there are.
+- Input Image 1, Input Image 2, Input Image 3 = clean WHITE-BACKGROUND flat-lay cut-outs, ONE single
+  piece of the same garment style per image, each in a DIFFERENT colourway, all photographed
+  STRAIGHT DOWN from directly above. These are the source of truth for the product: outline, cut,
+  waistband height, leg-opening binding, gusset panel, every seam, the knit texture, and the printed
+  logo including every Chinese character in it.
+  * Some of these slots may be empty. The requirement card states how many pieces this run has —
+    that number is the number of pieces in the output. Never invent an extra piece, never drop one.
+- The LAST input image is the colour reference (present only when the requirement card says so).
+  Use it ONLY to correct colour. Take nothing else from it — not its framing, background, props,
+  garment pose, layout or sharpness.
+  * When the requirement card says there is no colour reference, every image you receive is a
+    product, and each product keeps exactly the colour it already has.
 
 ★★ DO NOT REDRAW THE PRODUCTS — HARD REQUIREMENT.
-Preserve, pixel for pixel wherever possible: each garment's shape, cut, silhouette, outline, how it
-is folded or laid out, its position and rotation in the frame, its scale, which piece overlaps
-which, every seam, every elastic binding, the fabric's knit texture, and the printed logo including
-every Chinese character in it. Do not restyle, do not re-fold, do not re-pose, do not move or
-rotate or resize any piece, do not change how many pieces there are, do not add or remove a piece,
-do not swap their positions or their stacking order.
+Preserve, pixel for pixel wherever possible: each garment's shape, cut, silhouette, outline, its
+flat-laid form, every seam, every elastic binding, the leg-opening turn-back, the gusset panel, the
+fabric's knit texture, and the printed logo with every character intact.
 
-★★ SMOOTH THE FABRIC — this is the ONE thing about the garments you must change.
-Present each piece as if it had just been steamed by a product stylist: remove the random surface
-creases, wrinkles and press marks on the fabric faces. Keep only the gentle, natural undulation of
-soft knit cloth so it still reads as real fabric and not as plastic.
-Smoothing means the SURFACE only — it does NOT license you to re-fold or re-arrange: the structural
-folds that define each garment (the turned-back leg-opening bindings, the gusset panel, the way an
-edge is tucked under, the overall three-dimensional shape and outline) all stay exactly as in
-Input Image 1.
+★★ WHAT YOU MAY DO WITH THE PIECES — TWO-DIMENSIONAL PLACEMENT ONLY.
+Allowed, and encouraged so the composition looks styled rather than catalogued:
+  - move each piece anywhere in the frame (translation)
+  - scale each piece up or down a little, so they are not all identical in size
+  - offset them diagonally / stagger them instead of lining them up in a row
+  - let edges overlap slightly, one piece resting a little over another
+  - leave breathing space around the group; do not fill the frame edge to edge
+Forbidden, every one of these means recomputing a new three-dimensional form, which is redrawing:
+  - do NOT fold a piece, do NOT stack folded pieces
+  - do NOT stand a piece up, prop it up, or hang it
+  - do NOT roll or curl a piece
+  - do NOT turn a piece to a side or three-quarter angle
+  - do NOT drape a piece over a prop, a hand, or an edge
+  - do NOT re-pose, re-arrange or re-fold the cloth in any way
+Every piece stays laid flat, seen from straight above, exactly as it is in its input image.
 
-★★ THE COLOURWAYS MUST STAY DISTINCT and each must keep its own colour. Never make two pieces the
-same colour, never move a colour from one piece to another.
+★★ CAMERA — LOCKED TO STRAIGHT-DOWN TOP VIEW.
+The input cut-outs were shot with the camera pointing straight down, so the products carry no
+perspective. The scene must match that camera or the products will read as paper stickers pasted on.
+  - Camera directly overhead, optical axis perpendicular to the surface, zero tilt.
+  - No converging lines on the surface, no vanishing point, no visible table edge receding.
+  - A round tray or plate stays a true circle, never an ellipse. A square object stays a square.
+  - The camera angle is fixed HERE. If the requirement card describes any other angle, ignore that
+    part of it and keep straight-down; take only the surface, light and props from the card.
+
+★★ THE SURFACE MUST BE DARKER THAN THE PRODUCTS.
+These are pale garments. A pale surface swallows them. Whatever surface the requirement card names,
+render it clearly deeper in value than the products so the pieces are pushed forward by contrast.
+Never place pale products on a near-white or equally pale surface.
+
+★★ LIGHTING — ONE DIRECTIONAL SOFT LIGHT. FLAT LIGHT IS FORBIDDEN.
+A single soft key light coming from one side, large and diffused, giving a readable gradient across
+the surface and soft directional shading on the fabric folds. Do NOT light the frame evenly from the
+front or from directly above; even, shadowless light is what makes a flat-lay look cheap and dated.
+Fill the shadow side gently, never to the point of erasing the direction.
+
+★★ CONTACT SHADOWS — MANDATORY.
+Each piece casts its own soft contact shadow onto the surface, darkest and tightest where the cloth
+touches, softening outward, all shadows falling in the same direction as the key light. Without this
+the products float. Shadows land on the surface only; they never darken a neighbouring piece's
+colour.
+
+★★ DEPTH OF FIELD — PRODUCTS TACK SHARP, EVERYTHING ELSE SOFTER.
+Props and the far part of the surface are slightly defocused, so the frame has depth instead of
+being uniformly crisp. The garments themselves stay perfectly sharp — every seam, binding and logo
+character crisp. Never blur a product.
+
+★ THE SCENE IS DEFINED BY THE REQUIREMENT CARD, NOT BY THIS PROMPT.
+  Read the requirement card and build exactly the scene it names — its surface, its light quality and
+  its props. Follow it literally. If it says "no props", show no props at all. If it names a custom
+  scene, that wins.
+  Do NOT default to beige linen with dried flowers and ceramic dishes unless the card asks for it —
+  that is one option among many, not the house style. Different runs must look genuinely different.
+  Only if the card gives no scene at all: use a plain deep-neutral surface, soft directional side
+  light, no props.
+  The card never overrides the camera, the surface-darker-than-product rule, the lighting rule or the
+  contact-shadow rule — those are fixed above.
+
+★ PROPS CARRY NO REAL BRANDS. Any bottle, tube, jar, book, keyboard or packaging used as a prop must
+  show NO real brand name, logo or recognisable trademark (never reproduce DIOR, Jo Malone, Chanel,
+  etc.). Leave their surfaces blank or with meaningless decorative marks. This ban is on PROPS only —
+  the products' own printed logos must still be preserved exactly.
+  Props sit near the edges of the frame and never overlap or touch a product.
+
+★★ NO GRAPHIC ANNOTATION OF ANY KIND. Do not draw arrows, dashed lines, callout leaders, measurement
+  numbers, dimension marks, circles or arcs highlighting a detail, badges, shields, icons, labels,
+  captions, headlines or any text. All of that is added afterwards in Photoshop. The only text in the
+  frame is the products' own printed logos.
 
 ★★ ONE SINGLE PHOTOGRAPH. Output exactly one continuous photographic frame. Never a grid, collage,
-split panel, side-by-side comparison or detail-page layout. No dividing lines, no borders, no inset
-thumbnails, no captions.
+  split panel, side-by-side comparison or detail-page layout. No dividing lines, no borders, no inset
+  thumbnails.
 
-WHAT YOU MAY CHANGE — the scene:
-★ THE SCENE IS DEFINED BY THE REQUIREMENT CARD, NOT BY THIS PROMPT.
-  Read the requirement card and build exactly the scene it names — its surface, its light and its
-  props. Follow it literally. If it says "no props", show no props at all. If it names a custom
-  scene, that wins over everything else.
-  Do NOT default to beige linen with dried flowers and ceramic dishes unless the card asks for it —
-  that is one option among many, not the house style. Every run should look like the card says,
-  which means different runs will look genuinely different.
-  Only if the card gives no scene at all: use a plain, neutral pale surface with soft even light
-  and no props.
-- Replace the surface the products rest on and everything behind them with that scene.
-- Relight so the light direction and softness read as one coherent photograph, and cast natural
-  soft contact shadows under the products so they sit believably on the new surface.
-- Any props stay near the edges of the frame and never overlap the products.
-★ PROPS CARRY NO REAL BRANDS. Any bottle, tube, jar, book, keyboard or packaging used as a prop
-  must show NO real brand name, logo or recognisable trademark (never reproduce DIOR, Jo Malone,
-  Chanel, etc.). Leave their surfaces blank or with meaningless decorative marks. This ban is on
-  PROPS only — the product's own printed logo must still be preserved exactly.
+★★ THE COLOURWAYS MUST STAY DISTINCT. Every piece keeps its own colour. Never make two pieces the
+  same colour, never move a colour from one piece to another. A very pale colour must stay pale — do
+  not saturate it, do not whiten it. Do not let the surface colour or the prop colours cast onto the
+  garments.
 
-COLOUR: each garment keeps its true colour as given by its own colour reference. A very pale colour
-must stay pale — do not saturate it, do not whiten it. Do not let the new background's colour cast
-bleed onto the garments.
+SURFACE CREASES: the cut-outs may still show random surface creases and press marks. Smooth those
+away as a stylist would after steaming, keeping the gentle natural undulation of soft knit cloth so
+it still reads as real fabric and not as plastic. Smoothing is SURFACE ONLY — it never licenses
+re-folding, re-posing or changing the outline.
 
-OUTPUT: photorealistic, natural soft shadows, not plastic, not CGI, not over-sharpened. No
-watermark, no text or graphics other than the products' own printed logos.
+OUTPUT: photorealistic, natural soft shadows, not plastic, not CGI, not over-sharpened. No watermark.
