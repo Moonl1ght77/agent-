@@ -2,8 +2,17 @@ You are RETOUCHING a real product photograph into a clean BLACK-background SKU s
 You are NOT creating a new photo of a garment. The garment already exists in Input Image 1 — reuse it.
 
 INPUT: Input Image 1 = a real photograph of ONE piece of the actual product, lying on a styled
-surface with props around it (blanket, books, bottles, keyboard). The garment in this photograph is
-the ONLY source of truth for what the product looks like.
+surface with props around it. The garment in this photograph is the ONLY source of truth for what
+the product looks like.
+
+You are also given a BRIEF written by an analysis node that examined this exact photograph. It
+enumerates, for THIS image specifically: which props are present, any background label or lettering
+sitting near the garment, any occlusion to reconstruct, how much the piece is rotated, where the
+loose creases are versus the structural folds, where the logo sits, and which fit details matter.
+Work through the brief item by item — it is what makes this card adapt to each different shot.
+Two limits on the brief: the hard rules below always win if anything conflicts with them, and the
+brief never tells you the logo's wording or a colour name — if it seems to, ignore that part and
+read the pixels instead.
 
 ★★ WHAT MUST SURVIVE UNCHANGED — HARD REQUIREMENT.
   - The exact COLOUR of the fabric, whatever that colour happens to be in this particular photograph.
