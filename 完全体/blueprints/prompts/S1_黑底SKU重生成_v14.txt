@@ -1,4 +1,4 @@
-You are RETOUCHING a real product photograph into a clean white-background SKU shot.
+You are RETOUCHING a real product photograph into a clean BLACK-background SKU shot.
 You are NOT creating a new photo of a garment. The garment already exists in Input Image 1 — reuse it.
 
 INPUT: Input Image 1 = a real photograph of ONE piece of the actual product, lying on a styled
@@ -7,15 +7,14 @@ the ONLY source of truth for what the product looks like.
 
 ★★ WHAT MUST SURVIVE UNCHANGED — HARD REQUIREMENT.
   - The exact COLOUR of the fabric. This is a very pale, low-saturation garment. It must stay exactly
-    as pale and exactly as tinted as in the photograph. Do NOT whiten it toward the white background,
-    do NOT lift its exposure, do NOT saturate it into a definite colour. If the piece is a barely
-    tinted cream, it stays a barely tinted cream.
+    as pale and exactly as tinted as in the photograph. Do NOT bleach it toward white, do NOT let the
+    dark background drag it darker or grey, do NOT lift or drop its exposure, do NOT saturate it into
+    a definite colour. If the piece is a barely tinted cream, it stays a barely tinted cream.
     ★ The tint is faint but it IS the product's identity — this style ships in several near-white
-    colourways that differ only by that faint tint. In the finished image the garment must still
-    read as tinted against the pure white background: a viewer must be able to see that the fabric
-    is not the same white as the background behind it. Whatever direction the tint leans in the
-    photograph — cool blue, cool green, warm cream, pink — it leans the same way and by the same
-    amount in the output. Never neutralise it into background white.
+    colourways that differ only by that faint tint. Whatever direction the tint leans in the
+    photograph — cool blue, cool green, warm cream, pink — it leans the same way and by exactly the
+    same amount in the output. A cool blue-tinted piece must still read as cool and blue-tinted.
+    Never neutralise the tint, and never push a cool tint toward warm cream.
   - The cut and proportions: waistband height and its exact width, the rise, the leg-opening shape,
     the width of the elastic binding at the leg openings, the gusset panel and its outline, the hip
     curve, the overall silhouette.
@@ -27,8 +26,9 @@ the ONLY source of truth for what the product looks like.
 
 ★★ WHAT YOU MUST REMOVE.
   - The entire background and every prop: the knit blanket, books, bottles, tubes, keyboard, any
-    surface texture, any printed text belonging to a prop. Replace all of it with a seamless pure
-    white studio background.
+    surface texture, any printed text belonging to a prop. Replace all of it with a seamless, even,
+    pure BLACK studio background — a flat black void, RGB 0,0,0, with no gradient, no vignette, no
+    visible seam, no texture, no reflection and no surface under the garment.
   - ★ NOTHING FROM THE BACKGROUND MAY MIGRATE ONTO THE GARMENT. The knitwear behind the product
     carries its own woven brand label, and there is printed text on the books and bottles nearby.
     Every one of those belongs to the background and is deleted with it. Never copy a background
@@ -66,13 +66,13 @@ The photographed piece is creased because it was lying on a soft blanket. Relax 
     ironed-flat, airbrushed, plastic or CGI object. If it looks perfectly smooth, you have gone too
     far.
 
-★★ IT MUST LOOK PHOTOGRAPHED ON WHITE, NOT CUT OUT AND PASTED.
-  - No hard vector-sharp outline, no halo, no white fringe, no feathered edge, no visible selection
-    boundary anywhere along the garment.
-  - The edges of the fabric stay soft and slightly fibrous where the knit meets the background, the
-    way a real garment edge photographs.
-  - Add a very faint, soft contact shadow directly beneath the garment so it sits on the white
-    surface rather than floating on it. Faint — it must not tint the white background grey.
+★★ IT MUST LOOK PHOTOGRAPHED ON BLACK, NOT CUT OUT AND PASTED.
+  - No hard vector-sharp outline, no halo, no dark fringe, no bright rim-light outline, no feathered
+    edge, no visible selection boundary anywhere along the garment.
+  - The edges of the fabric stay soft and slightly fibrous where the knit meets the black, the way a
+    real pale garment photographs against a black sweep.
+  - No shadow is cast on the background — it is a black void, not a surface. Nothing under the
+    garment, no reflection, no glow.
 
 ★★ NOTHING ELSE IN THE FRAME.
 One single garment, one continuous photographic frame. No second piece, no hanger, no mannequin, no
@@ -80,5 +80,6 @@ hang tag, no care label, no woven brand label, no packaging, no props, no waterm
 graphics of any kind other than the garment's own printed leaf logo. No grid, no collage, no split
 panel, no border.
 
-OUTPUT: square 1:1, pure white seamless background, the garment centred with even margins, sharp
-enough that the seams, the binding and the logo characters are all clearly readable.
+OUTPUT: square 1:1, seamless pure black background, the garment centred with even margins, sharp
+enough that the seams, the binding and the logo characters are all clearly readable. The garment is
+lit brightly and evenly — it must never sink into the dark background.
