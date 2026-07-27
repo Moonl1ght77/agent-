@@ -19,6 +19,13 @@ INPUT IMAGES (fixed slots):
 Preserve, pixel for pixel wherever possible: each garment's shape, cut, silhouette, outline, its
 flat-laid form, every seam, every elastic binding, the leg-opening turn-back, the gusset panel, the
 fabric's knit texture, and the printed logo with every character intact.
+★ About that logo specifically: it is a small printed mark — a leaf-in-circle device with a short
+block of Chinese text beside it. Copy the pixels you were given. Never substitute invented characters,
+rows of little squares, blocks, dots or scribbles where the text is; never redraw the device; never
+enlarge it, move it or restyle it. If it is small on screen, it stays a small faithful copy — a
+faithful blur is correct, invented lettering is a failure.
+★ And the pieces stay FLAT. Do not give a piece a filled-out, padded, three-dimensional body as if it
+were on a form. They are flat garments resting on a table.
 
 ★★ WHAT YOU MAY DO WITH THE PIECES — TWO-DIMENSIONAL PLACEMENT ONLY.
 Allowed, and encouraged so the composition looks styled rather than catalogued:
@@ -63,23 +70,36 @@ means, exactly:
   - Every piece shares the table plane and therefore the same foreshortening. Do not give one piece
     a different viewing angle from another.
 
-★★ COMPOSITION — DEPTH, NOT A ROW.
-Build an arrangement that recedes, the way a styled editorial flat-lay does:
-  - ONE hero piece nearest the camera, largest, sitting low in the frame and taking up a good share
-    of it. It is the one the eye lands on first.
-  - The remaining pieces sit further back, progressively smaller with distance, staggered diagonally
-    rather than lined up, each offset from the next, edges overlapping a little.
-  - Leave breathing space; do not fill the frame edge to edge, and do not centre everything.
+★★ COMPOSITION — ONE HERO IN FRONT, THE REST SMALL AND BEHIND. NOT A ROW OF EQUALS.
+This is the single most important thing about the layout. Read the numbers, they are not suggestions:
+  - ONE hero piece, nearest the camera, occupying the LOWER HALF of the frame and roughly 45-60% of
+    the frame width. It is unmistakably the subject — the eye lands on it first.
+  - The hero is about TWICE the size of the others on screen. Not 10% bigger — twice.
+  - All remaining pieces sit in the UPPER THIRD of the frame, clearly smaller, clustered close
+    together and staggered, overlapping each other so they read as one group rather than separate
+    items. It is good if the topmost one is partly cut off by the top edge of the frame.
+  - The hero overlaps the front edge of that back group, or sits just clear of it — the two zones
+    read as foreground and background, not as one even line.
+  - Never lay the pieces out at similar sizes along a diagonal, evenly spaced. That is a catalogue
+    row, and it is exactly the look being replaced.
+  - Leave breathing space at the sides; do not centre everything symmetrically.
 
 ★★ DEPTH OF FIELD — GRADED, NOT UNIFORM.
 The hero piece in front is tack sharp: every seam, binding edge and logo character crisp. The pieces
 further back are very slightly softer. The props and the far table are softest. This gradient is what
 separates a photograph from a paste-up — but never blur a product to the point its seams disappear.
 
-★★ THE SURFACE MUST BE DARKER THAN THE PRODUCTS.
-These are pale garments. A pale surface swallows them. Whatever surface the requirement card names,
-render it clearly deeper in value than the products so the pieces are pushed forward by contrast.
-Never place pale products on a near-white or equally pale surface.
+★★ THE SURFACE MUST BE CLEARLY DARKER THAN THE PRODUCTS. THIS OVERRIDES THE SCENE TEXT.
+These are pale garments. A pale surface swallows them, and that flat pale look is precisely the
+"dated" result the client rejected. Whatever surface the scene block names, render it clearly deeper
+in value than the products so the pieces are pushed forward by contrast.
+  - Blonde or natural light wood is NOT acceptable. Pale linen, white marble, pale concrete, white
+    bedding are NOT acceptable — not even when the scene text asks for them. Deepen them.
+  - If the scene block names a pale surface, keep its material and mood but render that material in a
+    clearly dark value: light oak becomes dark walnut-toned oak, pale linen becomes a deep taupe
+    linen, and so on.
+  - Aim for the products reading distinctly brighter than the surface at a glance, the way a pale
+    garment does on a dark walnut table.
 
 ★★ LIGHTING — ONE DIRECTIONAL SOFT LIGHT. FLAT LIGHT IS FORBIDDEN.
 A single soft key light coming from one side, large and diffused, giving a readable gradient across
