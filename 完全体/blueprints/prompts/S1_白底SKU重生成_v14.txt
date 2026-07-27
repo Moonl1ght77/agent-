@@ -1,0 +1,67 @@
+You are RETOUCHING a real product photograph into a clean white-background SKU shot.
+You are NOT creating a new photo of a garment. The garment already exists in Input Image 1 — reuse it.
+
+INPUT: Input Image 1 = a real photograph of ONE piece of the actual product, lying on a styled
+surface with props around it (blanket, books, bottles, keyboard). The garment in this photograph is
+the ONLY source of truth for what the product looks like.
+
+★★ WHAT MUST SURVIVE UNCHANGED — HARD REQUIREMENT.
+  - The exact COLOUR of the fabric. This is a very pale, low-saturation garment. It must stay exactly
+    as pale and exactly as tinted as in the photograph. Do NOT whiten it toward the white background,
+    do NOT lift its exposure, do NOT saturate it into a definite colour. If the piece is a barely
+    tinted cream, it stays a barely tinted cream.
+  - The cut and proportions: waistband height and its exact width, the rise, the leg-opening shape,
+    the width of the elastic binding at the leg openings, the gusset panel and its outline, the hip
+    curve, the overall silhouette.
+  - Every seam and stitch line, exactly where it runs in the photograph.
+  - The knit texture, the fabric's soft sheen and its slight translucency at the thin areas.
+  - The printed logo: its position, its size, its graphic mark and every character of its text,
+    including the Chinese characters. Do not redraw it, do not restyle it, do not move it.
+  - The waistband's inner label if it is visible.
+
+★★ WHAT YOU MUST REMOVE.
+  - The entire background and every prop: the knit blanket, books, bottles, tubes, keyboard, any
+    surface texture, any printed text belonging to a prop. Replace all of it with a seamless pure
+    white studio background.
+  - The original harsh directional shadows and the bright hotspots the original lighting left on the
+    fabric. Relight the garment with soft, even studio light so the whole piece is evenly readable.
+  - If a prop overlaps or is tucked under the garment, remove the prop and reconstruct ONLY the small
+    occluded sliver of garment, matching the surrounding fabric colour, texture and seam direction
+    exactly. Never invent a shape that is not implied by the visible edges.
+
+★★ GEOMETRY — ONE CORRECTION ONLY.
+The photograph was taken from above but slightly tilted. Correct it to a true straight-on flat-lay
+view: camera perpendicular to the garment, the piece centred, upright, and symmetric left-to-right
+the way it actually is. This perspective correction is the ONE geometric change you are allowed.
+While doing it:
+  - Do NOT re-pose, re-fold, flip, mirror or rotate the garment to a different presentation.
+  - Do NOT stand it up, hang it, fold it or drape it.
+  - Do NOT stretch or squash the proportions to fill the frame.
+  - Do NOT change the silhouette, the cut, or the width of any part while straightening it.
+
+★★ THE WRINKLES — THIS IS THE POINT OF THE WHOLE CARD.
+The photographed piece is creased because it was lying on a soft blanket. Relax it, do not erase it:
+  - Remove the deep random dents pressed in by the surface underneath, and the sharp packaging
+    creases.
+  - KEEP the gentle, natural undulation of soft knit cloth: the soft roll at the waistband, the way
+    the leg-opening binding lifts slightly off the body of the garment, the shallow drape folds that
+    tell the eye this is real fabric.
+  - The result must read as a real garment carefully steamed and laid flat by a stylist — NOT as an
+    ironed-flat, airbrushed, plastic or CGI object. If it looks perfectly smooth, you have gone too
+    far.
+
+★★ IT MUST LOOK PHOTOGRAPHED ON WHITE, NOT CUT OUT AND PASTED.
+  - No hard vector-sharp outline, no halo, no white fringe, no feathered edge, no visible selection
+    boundary anywhere along the garment.
+  - The edges of the fabric stay soft and slightly fibrous where the knit meets the background, the
+    way a real garment edge photographs.
+  - Add a very faint, soft contact shadow directly beneath the garment so it sits on the white
+    surface rather than floating on it. Faint — it must not tint the white background grey.
+
+★★ NOTHING ELSE IN THE FRAME.
+One single garment, one continuous photographic frame. No second piece, no hanger, no mannequin, no
+hang tag, no care label added, no packaging, no props, no watermark, no text or graphics of any kind
+other than the garment's own printed logo. No grid, no collage, no split panel, no border.
+
+OUTPUT: square 1:1, pure white seamless background, the garment centred with even margins, sharp
+enough that the seams, the binding and the logo characters are all clearly readable.
