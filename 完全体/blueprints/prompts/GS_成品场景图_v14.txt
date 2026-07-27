@@ -23,9 +23,9 @@ fabric's knit texture, and the printed logo with every character intact.
 ★★ WHAT YOU MAY DO WITH THE PIECES — TWO-DIMENSIONAL PLACEMENT ONLY.
 Allowed, and encouraged so the composition looks styled rather than catalogued:
   - move each piece anywhere in the frame (translation)
-  - scale each piece up or down a little, so they are not all identical in size
+  - scale each piece freely — the near one clearly larger, the far ones clearly smaller
   - offset them diagonally / stagger them instead of lining them up in a row
-  - let edges overlap slightly, one piece resting a little over another
+  - let edges overlap, one piece resting partly over another
   - leave breathing space around the group; do not fill the frame edge to edge
 Forbidden, every one of these means recomputing a new three-dimensional form, which is redrawing:
   - do NOT fold a piece, do NOT stack folded pieces
@@ -34,16 +34,47 @@ Forbidden, every one of these means recomputing a new three-dimensional form, wh
   - do NOT turn a piece to a side or three-quarter angle
   - do NOT drape a piece over a prop, a hand, or an edge
   - do NOT re-pose, re-arrange or re-fold the cloth in any way
-Every piece stays laid flat, seen from straight above, exactly as it is in its input image.
+Every piece stays laid out flat, in exactly the shape it has in its input image. The only thing that
+changes about its outline is the perspective foreshortening described under CAMERA below.
 
-★★ CAMERA — LOCKED TO STRAIGHT-DOWN TOP VIEW.
-The input cut-outs were shot with the camera pointing straight down, so the products carry no
-perspective. The scene must match that camera or the products will read as paper stickers pasted on.
-  - Camera directly overhead, optical axis perpendicular to the surface, zero tilt.
-  - No converging lines on the surface, no vanishing point, no visible table edge receding.
-  - A round tray or plate stays a true circle, never an ellipse. A square object stays a square.
-  - The camera angle is fixed HERE. If the requirement card describes any other angle, ignore that
-    part of it and keep straight-down; take only the surface, light and props from the card.
+★★ CAMERA — HIGH OBLIQUE, ABOUT 60-70° DOWN FROM HORIZONTAL. NOT straight down, NOT eye level.
+Look down onto the table steeply, but with enough tilt that the table surface recedes into the frame
+and the scene has real depth. Concretely:
+  - The table surface runs from the bottom of the frame back into the upper third; its far edge and
+    the background are visible up there.
+  - A round tray or plate reads as an ELLIPSE, its foreshortening consistent with the camera tilt.
+    Every object in the frame shares that one consistent perspective.
+  - The camera angle is fixed HERE. If the requirement card describes some other angle, ignore that
+    part of it; take only the surface, light and props from the card.
+
+★★ HOW THE FLAT PIECES SIT UNDER THAT CAMERA — READ THIS CAREFULLY.
+Each input is a cut-out photographed straight down, so it has no perspective of its own. Lay each
+piece FLAT on the table surface and render it as that same flat piece seen obliquely. What that
+means, exactly:
+  - Allowed: projective foreshortening — the piece gets compressed along the viewing direction the
+    way any flat object does when you tilt the camera. This is a perspective transform of a flat
+    shape, nothing more.
+  - Forbidden: using the tilt as licence to redraw. The seams, the elastic binding and its width
+    relative to the body, the gusset outline, the waistband proportion and the printed logo are all
+    properties of the flat piece — after foreshortening they must still be recognisably the same
+    piece, just viewed at an angle.
+  - The pieces lie ON the table plane, flat. They are never lifted, tilted up, leaned, propped,
+    floated, or given a three-dimensional puffed-up body.
+  - Every piece shares the table plane and therefore the same foreshortening. Do not give one piece
+    a different viewing angle from another.
+
+★★ COMPOSITION — DEPTH, NOT A ROW.
+Build an arrangement that recedes, the way a styled editorial flat-lay does:
+  - ONE hero piece nearest the camera, largest, sitting low in the frame and taking up a good share
+    of it. It is the one the eye lands on first.
+  - The remaining pieces sit further back, progressively smaller with distance, staggered diagonally
+    rather than lined up, each offset from the next, edges overlapping a little.
+  - Leave breathing space; do not fill the frame edge to edge, and do not centre everything.
+
+★★ DEPTH OF FIELD — GRADED, NOT UNIFORM.
+The hero piece in front is tack sharp: every seam, binding edge and logo character crisp. The pieces
+further back are very slightly softer. The props and the far table are softest. This gradient is what
+separates a photograph from a paste-up — but never blur a product to the point its seams disappear.
 
 ★★ THE SURFACE MUST BE DARKER THAN THE PRODUCTS.
 These are pale garments. A pale surface swallows them. Whatever surface the requirement card names,
@@ -61,11 +92,6 @@ Each piece casts its own soft contact shadow onto the surface, darkest and tight
 touches, softening outward, all shadows falling in the same direction as the key light. Without this
 the products float. Shadows land on the surface only; they never darken a neighbouring piece's
 colour.
-
-★★ DEPTH OF FIELD — PRODUCTS TACK SHARP, EVERYTHING ELSE SOFTER.
-Props and the far part of the surface are slightly defocused, so the frame has depth instead of
-being uniformly crisp. The garments themselves stay perfectly sharp — every seam, binding and logo
-character crisp. Never blur a product.
 
 ★ THE SCENE IS DEFINED BY THE REQUIREMENT CARD, NOT BY THIS PROMPT.
   Read the requirement card and build exactly the scene it names — its surface, its light quality and
