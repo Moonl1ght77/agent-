@@ -10,6 +10,12 @@ the ONLY source of truth for what the product looks like.
     as pale and exactly as tinted as in the photograph. Do NOT whiten it toward the white background,
     do NOT lift its exposure, do NOT saturate it into a definite colour. If the piece is a barely
     tinted cream, it stays a barely tinted cream.
+    ★ The tint is faint but it IS the product's identity — this style ships in several near-white
+    colourways that differ only by that faint tint. In the finished image the garment must still
+    read as tinted against the pure white background: a viewer must be able to see that the fabric
+    is not the same white as the background behind it. Whatever direction the tint leans in the
+    photograph — cool blue, cool green, warm cream, pink — it leans the same way and by the same
+    amount in the output. Never neutralise it into background white.
   - The cut and proportions: waistband height and its exact width, the rise, the leg-opening shape,
     the width of the elastic binding at the leg openings, the gusset panel and its outline, the hip
     curve, the overall silhouette.
