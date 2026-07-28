@@ -70,19 +70,28 @@ means, exactly:
   - Every piece shares the table plane and therefore the same foreshortening. Do not give one piece
     a different viewing angle from another.
 
-★★ COMPOSITION — ONE HERO IN FRONT, THE REST SMALL AND BEHIND. NOT A ROW OF EQUALS.
-This is the single most important thing about the layout. Read the numbers, they are not suggestions:
-  - ONE hero piece, nearest the camera, occupying the LOWER HALF of the frame and roughly 45-60% of
-    the frame width. It is unmistakably the subject — the eye lands on it first.
-  - The hero is about TWICE the size of the others on screen. Not 10% bigger — twice.
-  - All remaining pieces sit in the UPPER THIRD of the frame, clearly smaller, clustered close
-    together and staggered, overlapping each other so they read as one group rather than separate
-    items. It is good if the topmost one is partly cut off by the top edge of the frame.
-  - The hero overlaps the front edge of that back group, or sits just clear of it — the two zones
-    read as foreground and background, not as one even line.
+★★ COMPOSITION — THIS IS AN E-COMMERCE DETAIL-PAGE MODULE, NOT A LIFESTYLE PHOTOGRAPH.
+The product is the information; the scene is only the backdrop that makes it look premium. Judge
+every layout decision by "does this help a shopper read the product", not by "is this pretty".
+Read the numbers, they are not suggestions:
+  - THE PRODUCTS FILL THE FRAME. All the pieces together occupy roughly 65-80% of the image area.
+    Large empty stretches of tabletop are wrong — that is the lifestyle look being replaced. Move the
+    camera in close.
+  - ONE hero piece, nearest the camera, in the LOWER HALF, roughly 55-70% of the frame width, and
+    about TWICE the on-screen size of the others. Not 10% bigger — twice.
+  - The remaining pieces sit above and behind it, clearly smaller, clustered tight and overlapping so
+    they read as one group. The topmost one may be partly cut off by the top edge.
+  - EVERY PIECE MUST STAY READABLE. Even the ones at the back show their waistband and most of their
+    body — never reduce a piece to a sliver of colour peeking out. A shopper has to be able to count
+    the colourways and see each one clearly. This outranks artful overlapping.
   - Never lay the pieces out at similar sizes along a diagonal, evenly spaced. That is a catalogue
     row, and it is exactly the look being replaced.
-  - Leave breathing space at the sides; do not centre everything symmetrically.
+
+★★ KEEP A CLEAN AREA FOR COPY.
+This image ships into a detail page where Chinese sales copy and callouts are added afterwards in
+Photoshop. Leave one uncluttered region — normally the upper-left, or whichever corner the layout
+allows — where the surface is plain and evenly lit: no props there, no bright highlight, no busy wood
+grain, nothing overlapping. Roughly a fifth of the frame. Leave it empty; do not write anything in it.
 
 ★★ DEPTH OF FIELD — GRADED, NOT UNIFORM.
 The hero piece in front is tack sharp: every seam, binding edge and logo character crisp. The pieces
@@ -129,7 +138,13 @@ colour.
   show NO real brand name, logo or recognisable trademark (never reproduce DIOR, Jo Malone, Chanel,
   etc.). Leave their surfaces blank or with meaningless decorative marks. This ban is on PROPS only —
   the products' own printed logos must still be preserved exactly.
-  Props sit near the edges of the frame and never overlap or touch a product.
+  ★ PROPS ARE MINIMAL AND CROPPED. Use only ONE or TWO props, and show only a PART of each — a corner
+  of a book, the edge of a knitted cloth — pushed against the frame edge and cropped by it. Together
+  they take up well under a fifth of the frame. Never place a whole prop, fully visible, inside the
+  composition; never let props overlap or touch a product; never let a prop compete with the products
+  for attention. If in doubt, use fewer props.
+  ★ NO ENVIRONMENTAL STORYTELLING. No window-frame light stripes across the table, no chair backs, no
+  walls, no room, no plants, no hands. Just the tabletop, the products, and one or two cropped props.
 
 ★★ NO GRAPHIC ANNOTATION OF ANY KIND. Do not draw arrows, dashed lines, callout leaders, measurement
   numbers, dimension marks, circles or arcs highlighting a detail, badges, shields, icons, labels,
