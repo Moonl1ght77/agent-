@@ -82,12 +82,22 @@ every layout decision by "does this help a shopper read the product", not by "is
 Read the numbers, they are not suggestions:
   - THE PRODUCTS DOMINATE THE FRAME. All the pieces together occupy roughly 55-70% of the image area,
     and they own the centre and the lower half. Large empty stretches of bare tabletop are wrong —
-    that is the lifestyle look being replaced. Move the camera in close. What is left over around
-    them is not emptiness: it is filled with the styled props described further down.
+    that is the lifestyle look being replaced. What is left over around them is not emptiness: it is
+    filled with the styled props described further down. Get this fill by arranging the pieces larger
+    and closer together, NEVER by letting them run past the frame edge.
   - ONE hero piece, nearest the camera, in the LOWER HALF, roughly 55-70% of the frame width, and
     about TWICE the on-screen size of the others. Not 10% bigger — twice.
   - The remaining pieces sit above and behind it, clearly smaller, clustered tight and overlapping so
-    they read as one group. The topmost one may be partly cut off by the top edge.
+    they read as one group.
+  - ★★ EVERY GARMENT IS SHOWN COMPLETE, INSIDE THE FRAME. Not one piece may touch or run off any
+    frame edge — not the bottom, not the sides, not the top. Each piece is whole: waistband, both leg
+    openings, the full lower edge, all visible. Leave a clear margin of bare surface between the
+    product group and every edge of the image. A shopper is buying this garment; a cropped garment is
+    a defective product photo, however stylish it looks. If making them all fit means pulling the
+    camera back a little, pull back — completeness beats filling the frame.
+  - Pieces may overlap EACH OTHER (a back piece partly hidden behind the hero is fine, as long as its
+    waistband and most of its body still read). Only the frame edge is forbidden to cut them.
+  - Props, by contrast, SHOULD be cropped by the frame edge. Props cropped, products never.
   - EVERY PIECE MUST STAY READABLE. Even the ones at the back show their waistband and most of their
     body — never reduce a piece to a sliver of colour peeking out. A shopper has to be able to count
     the colourways and see each one clearly. This outranks artful overlapping.
