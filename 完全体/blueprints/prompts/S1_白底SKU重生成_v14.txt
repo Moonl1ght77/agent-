@@ -34,9 +34,18 @@ read the pixels instead.
     curve, the overall silhouette.
   - Every seam and stitch line, exactly where it runs in the photograph.
   - The knit texture, the fabric's soft sheen and its slight translucency at the thin areas.
-  - The product's own printed logo — the small leaf mark with Chinese text printed on the front of
-    the garment: its position, its size, its graphic mark and every character of its text. Do not
-    redraw it, do not restyle it, do not move it.
+  - The product's own printed logo on the front of the garment — its position, its size, its graphic
+    and every character of its text. Do not redraw it, do not restyle it, do not move it. It has three
+    parts, each a known failure point:
+      1. A thin circle outline enclosing a single leaf (midrib visible), on the left.
+      2. Directly BELOW that circle: ONE solid, filled, rounded horizontal bar — a single unbroken
+         lozenge, like a filled pill. It is a GRAPHIC, not text. Never draw it as a row of little
+         squares, a dashed or dotted line, a segmented strip, a barcode, tick marks, or any string of
+         letters or digits. One continuous filled shape with rounded ends.
+      3. To the right of the circle: two short lines of Chinese text, a thin rule under them, and a
+         short line of Latin text below the rule.
+    Where the text is too small to resolve, render a faithful soft blur of stroke-like marks. A
+    faithful blur is CORRECT; invented squares, blocks, dots, grids or made-up glyphs are a FAILURE.
 
 ★★ WHAT YOU MUST REMOVE.
   - The entire background and every prop: the knit blanket, books, bottles, tubes, keyboard, any

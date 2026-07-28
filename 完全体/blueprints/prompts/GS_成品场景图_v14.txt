@@ -19,11 +19,18 @@ INPUT IMAGES (fixed slots):
 Preserve, pixel for pixel wherever possible: each garment's shape, cut, silhouette, outline, its
 flat-laid form, every seam, every elastic binding, the leg-opening turn-back, the gusset panel, the
 fabric's knit texture, and the printed logo with every character intact.
-★ About that logo specifically: it is a small printed mark — a leaf-in-circle device with a short
-block of Chinese text beside it. Copy the pixels you were given. Never substitute invented characters,
-rows of little squares, blocks, dots or scribbles where the text is; never redraw the device; never
-enlarge it, move it or restyle it. If it is small on screen, it stays a small faithful copy — a
-faithful blur is correct, invented lettering is a failure.
+★ About that logo specifically — it has THREE parts, and each one is a common failure point. Copy the
+pixels you were given; never redraw the mark, never enlarge, move or restyle it.
+  1. A thin circle outline enclosing a single leaf (the leaf's midrib visible), on the left.
+  2. Directly BELOW that circle: ONE solid, filled, rounded horizontal bar — a single unbroken
+     lozenge, like a filled pill shape. It is a GRAPHIC, not text. It must never be drawn as a row of
+     little squares, a dashed or dotted line, a segmented strip, a barcode, tick marks, or any string
+     of letters or digits. One continuous filled shape with rounded ends, nothing else.
+  3. To the right of the circle: two short lines of Chinese text, a thin horizontal rule under them,
+     and a short line of Latin text below the rule.
+  At detail-page scale this text is only a few pixels tall. Render it as a faithful soft blur of
+  stroke-like marks — a faithful blur is CORRECT. Inventing discrete squares, blocks, dots, grids or
+  made-up glyphs is a FAILURE, and is worse than a blur.
 ★ And the pieces stay FLAT. Do not give a piece a filled-out, padded, three-dimensional body as if it
 were on a form. They are flat garments resting on a table.
 
