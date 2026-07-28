@@ -108,15 +108,27 @@ Read the numbers, they are not suggestions:
     - Anatomy must be correct: five fingers, one thumb, plausible joints and proportions. If you
       cannot render the hand convincingly, crop it further so that only two or three fingertips show.
 
-  `Hand = 手持 / hold` → ONE hand pinching the waistband of the hero piece between thumb and
-  fingers and holding it up towards the camera, the way a seller shows a garment. Same hand
-  styling rules as above (bare, unadorned, correct anatomy, cropped at the wrist).
-    - This is the ONE case where you may reshape a garment: the held piece hangs from the pinch, so
-      its cloth falls and drapes. Reshape ONLY that one piece, and only as much as the hold requires.
-    - Even then, keep everything that identifies it: the waistband height and width, the leg-opening
-      binding and its thickness, the gusset panel, every seam line, and the printed logo — same
-      position on the piece, same size relative to it, same characters. Do not re-letter the logo.
-    - Every OTHER piece in the frame stays flat on the table, untouched and undeformed.
+  `Hand = 手持 / hold` → ONE hand pinching the waistband of the hero piece and holding it up towards
+  the camera, the way a seller shows a garment to a customer. Same hand styling rules as above (bare,
+  unadorned, correct anatomy, wrist cropped by the frame).
+    - Geometry, follow it closely: the hand comes in from ONE SIDE, low, cropped at the wrist by the
+      frame edge; thumb in front and fingers behind, pinching the waistband near one corner — not in
+      the middle, not with the whole fist. The piece hangs down from that pinch under its own weight.
+    - The held piece TURNS TO FACE THE LENS. Unlike the pieces on the table, it is seen almost
+      straight-on: its front panel squarely towards the camera, so the waistband, the leg openings,
+      the gusset and the logo are all plainly readable. It is the hero — it fills roughly the lower
+      half of the frame.
+    - It hangs naturally: the waistband stays a straight taut line across the top, dipping slightly
+      where the fingers pinch it; the body of the garment falls below it with soft gravity folds and
+      a gently curved lower edge. Not stiff, not board-flat, not billowing.
+    - This is the ONE case where you may reshape a garment. Reshape ONLY this piece, and only as much
+      as hanging from a pinch requires.
+    - Even then, keep everything that identifies it: the waistband height and its width relative to
+      the body, the leg-opening binding and its thickness, the gusset panel outline, every seam line,
+      and the printed logo — same place on the garment, same size relative to it, same characters.
+      Do not re-letter the logo, do not invent characters, do not move or resize it.
+    - Every OTHER piece in the frame stays flat on the table, untouched and undeformed, and still
+      obeys the oblique table camera.
 
   Whatever the branch: never more than one hand, never a face, never a body, never a second person.
 
