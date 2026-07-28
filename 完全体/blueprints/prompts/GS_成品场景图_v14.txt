@@ -9,11 +9,8 @@ INPUT IMAGES (fixed slots):
   logo including every Chinese character in it.
   * Some of these slots may be empty. The requirement card states how many pieces this run has —
     that number is the number of pieces in the output. Never invent an extra piece, never drop one.
-- The LAST input image is the colour reference (present only when the requirement card says so).
-  Use it ONLY to correct colour. Take nothing else from it — not its framing, background, props,
-  garment pose, layout or sharpness.
-  * When the requirement card says there is no colour reference, every image you receive is a
-    product, and each product keeps exactly the colour it already has.
+  * EVERY image you receive is a product. There is no colour reference and no style reference in the
+    inputs. Each piece keeps exactly the colour it already has in its own image.
 
 ★★ DO NOT REDRAW THE PRODUCTS — HARD REQUIREMENT.
 Preserve, pixel for pixel wherever possible: each garment's shape, cut, silhouette, outline, its
