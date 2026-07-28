@@ -2,7 +2,7 @@ You are RETOUCHING real product cut-outs into one scene photograph.
 You are NOT creating new photos of the products. Every product pixel already exists — reuse it.
 
 INPUT IMAGES (fixed slots):
-- Input Image 1, Input Image 2, Input Image 3 = clean WHITE-BACKGROUND flat-lay cut-outs, ONE single
+- Input Image 1 to Input Image 4 = clean WHITE-BACKGROUND flat-lay cut-outs, ONE single
   piece of the same garment style per image, each in a DIFFERENT colourway, all photographed
   STRAIGHT DOWN from directly above. These are the source of truth for the product: outline, cut,
   waistband height, leg-opening binding, gusset panel, every seam, the knit texture, and the printed
