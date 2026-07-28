@@ -74,9 +74,10 @@ means, exactly:
 The product is the information; the scene is only the backdrop that makes it look premium. Judge
 every layout decision by "does this help a shopper read the product", not by "is this pretty".
 Read the numbers, they are not suggestions:
-  - THE PRODUCTS FILL THE FRAME. All the pieces together occupy roughly 65-80% of the image area.
-    Large empty stretches of tabletop are wrong — that is the lifestyle look being replaced. Move the
-    camera in close.
+  - THE PRODUCTS DOMINATE THE FRAME. All the pieces together occupy roughly 55-70% of the image area,
+    and they own the centre and the lower half. Large empty stretches of bare tabletop are wrong —
+    that is the lifestyle look being replaced. Move the camera in close. What is left over around
+    them is not emptiness: it is filled with the styled props described further down.
   - ONE hero piece, nearest the camera, in the LOWER HALF, roughly 55-70% of the frame width, and
     about TWICE the on-screen size of the others. Not 10% bigger — twice.
   - The remaining pieces sit above and behind it, clearly smaller, clustered tight and overlapping so
@@ -87,11 +88,11 @@ Read the numbers, they are not suggestions:
   - Never lay the pieces out at similar sizes along a diagonal, evenly spaced. That is a catalogue
     row, and it is exactly the look being replaced.
 
-★★ KEEP A CLEAN AREA FOR COPY.
-This image ships into a detail page where Chinese sales copy and callouts are added afterwards in
-Photoshop. Leave one uncluttered region — normally the upper-left, or whichever corner the layout
-allows — where the surface is plain and evenly lit: no props there, no bright highlight, no busy wood
-grain, nothing overlapping. Roughly a fifth of the frame. Leave it empty; do not write anything in it.
+★★ KEEP ONE SMALL CLEAN AREA FOR COPY.
+This image ships into a detail page where Chinese sales copy is added afterwards in Photoshop. Amid
+all the styling, keep ONE modest region — normally the upper-left — reading as plain, evenly lit
+tabletop: no prop crossing it, no bright highlight, no busy grain. About an eighth of the frame is
+enough; the rest of the margins stay richly dressed. Leave it empty; never write anything in it.
 
 ★★ DEPTH OF FIELD — GRADED, NOT UNIFORM.
 The hero piece in front is tack sharp: every seam, binding edge and logo character crisp. The pieces
@@ -138,13 +139,18 @@ colour.
   show NO real brand name, logo or recognisable trademark (never reproduce DIOR, Jo Malone, Chanel,
   etc.). Leave their surfaces blank or with meaningless decorative marks. This ban is on PROPS only —
   the products' own printed logos must still be preserved exactly.
-  ★ PROPS ARE MINIMAL AND CROPPED. Use only ONE or TWO props, and show only a PART of each — a corner
-  of a book, the edge of a knitted cloth — pushed against the frame edge and cropped by it. Together
-  they take up well under a fifth of the frame. Never place a whole prop, fully visible, inside the
-  composition; never let props overlap or touch a product; never let a prop compete with the products
-  for attention. If in doubt, use fewer props.
+  ★ THE SCENE IS RICHLY STYLED — USE FOUR TO SIX PROPS. The margins of the frame should feel dressed
+  and layered, like a stylist's desk, not bare. Books, a wooden tray, folded knitted or crocheted
+  cloth, woven rattan, a linen napkin, a small card, a matte ceramic cup — several of them, at
+  different depths, some resting partly on top of each other.
+  ★ BUT THEY LIVE AT THE EDGES AND BEHIND. Every prop is pushed to the frame's border and mostly
+  CROPPED by it — a corner of a book, one edge of a cloth, part of a tray. Together they dress the
+  margins and the space behind the products. They never sit in the middle of the composition, never
+  overlap or touch a product, and never out-shout the garments: the products stay the brightest,
+  sharpest, largest thing in the frame. Rich background, unmistakable subject.
   ★ NO ENVIRONMENTAL STORYTELLING. No window-frame light stripes across the table, no chair backs, no
-  walls, no room, no plants, no hands. Just the tabletop, the products, and one or two cropped props.
+  walls, no rooms, no plants, no hands. The richness comes from the styled props on the tabletop, not
+  from showing a room.
 
 ★★ NO GRAPHIC ANNOTATION OF ANY KIND. Do not draw arrows, dashed lines, callout leaders, measurement
   numbers, dimension marks, circles or arcs highlighting a detail, badges, shields, icons, labels,
