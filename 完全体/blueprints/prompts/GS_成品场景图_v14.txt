@@ -181,6 +181,22 @@ touches, softening outward, all shadows falling in the same direction as the key
 the products float. Shadows land on the surface only; they never darken a neighbouring piece's
 colour.
 
+★ AN OPTIONAL COMPOSITION-REFERENCE BRIEF MAY REACH YOU.
+  A second analysis node may hand you a block headed `LAYOUT (use this verbatim):`. It describes the
+  layout of a reference image the client liked: how many pieces, which is the hero and how much bigger
+  it is, where each sits, how tightly the frame is filled, where the clean area is, roughly what
+  camera angle, how the depth of field is layered, and the overall feel.
+  - When that block is present, follow it for LAYOUT — it overrides the default numbers given above
+    for hero size, placement and framing tightness.
+  - When it says `reference unusable`, or when no such block arrives at all, use the default
+    composition numbers above.
+  - It never overrides the hard rules: products complete inside the frame, no folding or standing or
+    rolling or hanging, one consistent oblique table perspective, surface darker than the products,
+    single directional soft light, contact shadows, no graphic annotation. If the brief implies any
+    of those, ignore that part.
+  - It says nothing about the products themselves, the surface, the props or the light. Products come
+    from the input images; surface, props and light come from the scene block below.
+
 ★ THE SCENE IS CHOSEN UPSTREAM, NOT BY THIS PROMPT.
   A scene-selector node picks one scene per run and hands you a block headed
   `SCENE (use this verbatim):`. Build exactly that scene — its surface, its props, its light quality.
