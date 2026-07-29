@@ -272,10 +272,25 @@ colour.
   split panel, side-by-side comparison or detail-page layout. No dividing lines, no borders, no inset
   thumbnails.
 
-★★ THE COLOURWAYS MUST STAY DISTINCT. Every piece keeps its own colour. Never make two pieces the
-  same colour, never move a colour from one piece to another. A very pale colour must stay pale — do
-  not saturate it, do not whiten it. Do not let the surface colour or the prop colours cast onto the
-  garments.
+★★ EVERY PIECE KEEPS EXACTLY THE COLOUR IT HAS IN ITS OWN INPUT IMAGE. THIS OUTRANKS EVERYTHING
+  BELOW IT IN THIS SECTION.
+  Sample the colour from the input image and reproduce it. A very pale colour stays very pale: do not
+  saturate it, do not deepen it, do not warm it, do not whiten it, do not "improve" it. Never move a
+  colour from one piece to another. Do not let the cream surface or the props cast their colour onto
+  the garments.
+  ★★ THE PIECES SHOULD BE TELLABLE APART — BUT NEVER BY CHANGING A COLOUR. Read this carefully; it is
+  the exact mistake this node made on 2026-07-29. Given six near-identical pastels, it pushed a pale
+  pink to coral and a pale mauve to deep rose so they would "read as different colourways". That is a
+  hard failure: the shopper receives the pale garment, not the saturated one you invented.
+    - Separation between pieces comes ONLY from layout: put similar tones apart from each other rather
+      than adjacent, stagger the pieces, let the edges and shadows define where one ends and the next
+      begins.
+    - If two colourways genuinely look almost the same, THEY LOOK ALMOST THE SAME. Render them both
+      faithfully and let them. An honest pair of near-twins is correct; an invented colour is not.
+    - No piece may end up more saturated or darker than its own input image. If you are ever choosing
+      between "distinct" and "faithful", choose FAITHFUL.
+    - The only thing you may never do is give two pieces the same colour by copying one onto the
+      other — that is a different error, and it is also forbidden.
 
 SURFACE CREASES: the cut-outs may still show random surface creases and press marks. Smooth those
 away as a stylist would after steaming, keeping the gentle natural undulation of soft knit cloth so
