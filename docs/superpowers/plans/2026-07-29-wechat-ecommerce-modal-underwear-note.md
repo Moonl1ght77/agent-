@@ -327,3 +327,14 @@ git -C E:\AI-Memory push origin master
 - 项目交付记录已提交并推送：`26a4e23`。
 - 共享记忆已提交并推送：`046611b`。
 - 最终只交付 DOCX；JSON、构建脚本、嵌入图副本和渲染 PNG 均保留在 `scratchpad/`，不作为交付物。
+
+---
+
+## 2026-07-29 追加六张白底 SKU
+
+- [x] 精确解析 `SKU白底图_V14最终` 中 Joe 指定的 6 张 2048×2048 JPG。
+- [x] 在 8 张卖点详情图后、颜色尺码收尾前新增“六色单款展示”。
+- [x] 六张图按用户给定顺序排成 2 列×3 行，只等比缩放，不调亮、调色或裁切。
+- [x] 因原 10 页 DOCX 正被 WPS 占用，保留原文件并另存为 `微信电商笔记_软糯莫代尔舒适内裤_含六色SKU.docx`。
+- [x] 内容与 OOXML 验收通过：`MEDIA_COUNT=14`、`IMAGE_ORDER=PASS`、`FACTS=PASS`、`FORBIDDEN_CLAIMS=0`。
+- [x] WPS→PDF→Poppler 渲染为 11 页 PNG；全页视觉复核通过，新增六图同页完整显示，无裁切、重叠、乱码或明显色变。
