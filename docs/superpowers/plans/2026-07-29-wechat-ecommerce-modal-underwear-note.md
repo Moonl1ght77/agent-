@@ -33,7 +33,7 @@
 - Consumes: 已确认商品数据、8 个 PNG 绝对路径、设计规格中的图文顺序。
 - Produces: UTF-8 JSON 对象，字段为 `title`、`alternateTitles`、`productInfo`、`lead`、`sections`、`closing`。
 
-- [ ] **Step 1: 写入 JSON 内容结构**
+- [x] **Step 1: 写入 JSON 内容结构**
 
 JSON 顶层必须符合：
 
@@ -83,7 +83,7 @@ JSON 顶层必须符合：
 08_细腻包边.png
 ```
 
-- [ ] **Step 2: 写内容校验器**
+- [x] **Step 2: 写内容校验器**
 
 实现：
 
@@ -106,7 +106,7 @@ REQUIRED = ["95%莫代尔", "5%氨纶", "100%棉", "L（80–110斤）", "XL（1
 
 同时检查 8 个图片路径都存在。
 
-- [ ] **Step 3: 运行内容校验**
+- [x] **Step 3: 运行内容校验**
 
 Run:
 
@@ -135,7 +135,7 @@ IMAGE_PATHS_EXIST=8
 - Consumes: Task 1 JSON。
 - Produces: 可正常打开的 DOCX，包含 8 张嵌入图和完整正文。
 
-- [ ] **Step 1: 固化文档样式令牌**
+- [x] **Step 1: 固化文档样式令牌**
 
 采用 `narrative_proposal` 预设，命名覆盖 `wechat_editorial`：
 
@@ -149,13 +149,13 @@ STYLE = {
     "h1": {"size_pt": 16, "before_pt": 14, "after_pt": 7, "color": "6E3345"},
     "h2": {"size_pt": 13, "before_pt": 10, "after_pt": 5, "color": "6E3345"},
     "table": {"width_dxa": 9360, "indent_dxa": 120, "columns_dxa": [1800, 7560]},
-    "image_width_in": 5.1,
+    "image_width_in": 4.65,
 }
 ```
 
 首屏使用 `editorial_cover` 的轻量变体：酒红色英文 kicker、左对齐中文标题、灰色副标题，不做独立空白封面。
 
-- [ ] **Step 2: 实现构建函数**
+- [x] **Step 2: 实现构建函数**
 
 实现以下边界明确的函数：
 
@@ -180,7 +180,7 @@ image.save(output_path, format="PNG", optimize=True)
 
 不得执行亮度、颜色、对比度、裁切或绘字操作。
 
-- [ ] **Step 3: 生成 DOCX**
+- [x] **Step 3: 生成 DOCX**
 
 Run:
 
@@ -209,7 +209,7 @@ OUTPUT=E:\Studio-Assets\周周的内衣内裤项目\内裤\成品_2026-07-29\微
 - Consumes: Task 2 DOCX。
 - Produces: 结构验收输出、全页 PNG 和执行结果记录。
 
-- [ ] **Step 1: 验证 DOCX 结构与正文**
+- [x] **Step 1: 验证 DOCX 结构与正文**
 
 校验器必须：
 
@@ -227,7 +227,7 @@ assert len(media) == 8
 - 正文不包含全部 FORBIDDEN；
 - 文档没有空图片关系或外链图片。
 
-- [ ] **Step 2: 运行结构验收**
+- [x] **Step 2: 运行结构验收**
 
 Run:
 
@@ -245,7 +245,7 @@ FACTS=PASS
 FORBIDDEN_CLAIMS=0
 ```
 
-- [ ] **Step 3: 渲染 DOCX 为全页 PNG**
+- [x] **Step 3: 渲染 DOCX 为全页 PNG**
 
 Run:
 
@@ -255,7 +255,7 @@ C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\dependencies\
 
 Expected: `page-1.png` 至最后一页均存在。
 
-- [ ] **Step 4: 逐页视觉检查并迭代**
+- [x] **Step 4: 逐页视觉检查并迭代**
 
 检查每一页：
 
@@ -268,9 +268,18 @@ Expected: `page-1.png` 至最后一页均存在。
 
 发现问题时只修改 Task 2 构建器，重新生成、重新运行 Task 3 全部检查，直到通过。
 
-- [ ] **Step 5: 回写执行结果**
+- [x] **Step 5: 回写执行结果**
 
 在本计划末尾记录最终页数、媒体数量、正文事实检查和视觉检查结果。
+
+#### Task 3 执行结果
+
+- 最终文档为 10 页，8 张详情图按 `01` 至 `08` 顺序完整嵌入。
+- 内容校验通过：8 个章节、8 个图片路径、所有确认商品参数均存在。
+- OOXML 结构校验通过：`MEDIA_COUNT=8`、`IMAGE_ORDER=PASS`、`FACTS=PASS`、`FORBIDDEN_CLAIMS=0`。
+- 当前环境无 LibreOffice，改用 WPS 导出 PDF，再由 Poppler 渲染 10 张全页 PNG。
+- 逐页视觉检查通过：中文无乱码，标题、正文和参数块无重叠或截断，图片均与对应文案同页且无拉伸、裁切或明显色变。
+- 最终版将嵌入宽度收至 4.65 英寸，并把备选标题移到收尾页，消除了图片拆页和开篇断页。
 
 ---
 
@@ -283,7 +292,7 @@ Expected: `page-1.png` 至最后一页均存在。
 - Consumes: 已通过 Task 3 的 DOCX。
 - Produces: 项目提交、记忆库提交和最终交付回执。
 
-- [ ] **Step 1: 更新项目记忆**
+- [x] **Step 1: 更新项目记忆**
 
 记录：最终 DOCX 路径、采用 A 尺码口径、8 图顺序、未写未经证实的抑菌/17CM 数据、结构与视觉验收结果。
 
