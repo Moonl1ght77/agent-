@@ -296,7 +296,7 @@ Expected: `page-1.png` 至最后一页均存在。
 
 记录：最终 DOCX 路径、采用 A 尺码口径、8 图顺序、未写未经证实的抑菌/17CM 数据、结构与视觉验收结果。
 
-- [ ] **Step 2: 检查并提交项目记录**
+- [x] **Step 2: 检查并提交项目记录**
 
 Run:
 
@@ -307,7 +307,7 @@ git commit -m "docs: record wechat underwear note delivery"
 git push origin main
 ```
 
-- [ ] **Step 3: 提交共享记忆**
+- [x] **Step 3: 提交共享记忆**
 
 Run:
 
@@ -318,6 +318,12 @@ git -C E:\AI-Memory commit -m "记录莫代尔内裤微信图文笔记交付"
 git -C E:\AI-Memory push origin master
 ```
 
-- [ ] **Step 4: 最终交付**
+- [x] **Step 4: 最终交付**
 
 只向 Joe 交付最终 DOCX，不交付渲染 PNG、临时 JSON 或构建脚本；附数量、页数、事实校验、视觉验收和【记忆存档回执】。
+
+#### Task 4 执行结果
+
+- 项目交付记录已提交并推送：`26a4e23`。
+- 共享记忆已提交并推送：`046611b`。
+- 最终只交付 DOCX；JSON、构建脚本、嵌入图副本和渲染 PNG 均保留在 `scratchpad/`，不作为交付物。
