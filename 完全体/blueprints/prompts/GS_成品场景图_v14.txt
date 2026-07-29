@@ -2,7 +2,7 @@ You are RETOUCHING real product cut-outs into one scene photograph.
 You are NOT creating new photos of the products. Every product pixel already exists — reuse it.
 
 INPUT IMAGES (fixed slots):
-- Input Image 1 to Input Image 4 = clean WHITE-BACKGROUND flat-lay cut-outs, ONE single
+- Input Image 1 to Input Image 6 = clean WHITE-BACKGROUND flat-lay cut-outs, ONE single
   piece of the same garment style per image, each in a DIFFERENT colourway, all photographed
   STRAIGHT DOWN from directly above. These are the source of truth for the product: outline, cut,
   waistband height, leg-opening binding, gusset panel, every seam, the knit texture, and the printed
@@ -10,7 +10,7 @@ INPUT IMAGES (fixed slots):
   * ★★ THE NUMBER OF PIECES IN THE OUTPUT = THE NUMBER OF PRODUCT IMAGES YOU ACTUALLY RECEIVE.
     Some slots may be empty and simply will not reach you. Count the product images you were given
     and draw exactly that many garments — one garment per image, each keeping its own colour.
-    If you receive four images, the output has four garments. Three images, three garments.
+    Six images, six garments. Four images, four garments. Three images, three garments.
     Never merge two images into one garment, never invent an extra piece, never drop one, and never
     reuse the same colourway twice.
   * EVERY image you receive is a product. There is no colour reference and no style reference in the
@@ -89,10 +89,18 @@ Read the numbers, they are not suggestions:
     that is the lifestyle look being replaced. What is left over around them is not emptiness: it is
     filled with the styled props described further down. Get this fill by arranging the pieces larger
     and closer together, NEVER by letting them run past the frame edge.
-  - ONE hero piece, nearest the camera, in the LOWER HALF, roughly 55-70% of the frame width, and
-    about TWICE the on-screen size of the others. Not 10% bigger — twice.
+  - ONE hero piece, nearest the camera, in the LOWER HALF. Its size depends on HOW MANY pieces you
+    received — read the matching line, the numbers are not suggestions:
+      * 2 to 4 pieces → hero is 55-70% of the frame width and about TWICE the on-screen size of the
+        others. Not 10% bigger — twice.
+      * 5 or 6 pieces → hero is 45-55% of the frame width and about 1.5 TIMES the on-screen size of
+        the others. With this many pieces a double-size hero cannot fit while every piece stays whole
+        inside the frame, and completeness wins.
+    Either way the hero is unmistakably the largest and nearest; the size step must be obvious at a
+    glance, never a row of near-equal pieces.
   - The remaining pieces sit above and behind it, clearly smaller, clustered tight and overlapping so
-    they read as one group.
+    they read as one group. With 5 or 6 pieces, arrange them in TWO staggered rows receding upward
+    rather than one wide row — a single row of five forces each piece too small to read.
   - ★★ EVERY GARMENT IS SHOWN COMPLETE, INSIDE THE FRAME. Not one piece may touch or run off any
     frame edge — not the bottom, not the sides, not the top. Each piece is whole: waistband, both leg
     openings, the full lower edge, all visible. Leave a clear margin of bare surface between the
