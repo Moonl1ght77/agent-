@@ -1,0 +1,49 @@
+{
+  "project_title": "V14.7-六色白底SKU批量（一次出六张）",
+  "output_file": "V14.7内裤线_六色白底SKU批量.lxf",
+  "app_version": "1.4.6",
+  "defaults": {
+    "chat": { "model": "gpt-5.5", "provider": "jijing" },
+    "image": { "model": "gpt-image-2", "provider": "jijing" }
+  },
+  "cards": [
+    { "ref": "DOC", "type": "sticky_note", "title": "①使用说明（先读我）", "x": -1060, "y": 0, "w": 460, "h": 760, "promptFile": "DOC_六色白底SKU批量_v14.txt" },
+
+    { "ref": "INR1", "type": "ai_image", "title": "INR1·原片·配色一", "x": -500, "y": 0, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "A01", "type": "ai_chat", "title": "A01·原片分析·配色一", "x": -140, "y": 0, "w": 380, "h": 340, "promptFile": "A0_原片分析_v14.txt" },
+    { "ref": "SKU1", "type": "ai_image", "title": "SKU1·白底SKU图·配色一（1:1·2K）", "x": 320, "y": 0, "w": 255, "h": 340, "data": { "model": "nano-banana-2", "provider": "jijing", "size": "1:1", "resolution": "2K", "quality": "high" }, "promptFile": "S1_白底SKU重生成_v14.txt" },
+
+    { "ref": "INR2", "type": "ai_image", "title": "INR2·原片·配色二", "x": -500, "y": 420, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "A02", "type": "ai_chat", "title": "A02·原片分析·配色二", "x": -140, "y": 420, "w": 380, "h": 340, "promptFile": "A0_原片分析_v14.txt" },
+    { "ref": "SKU2", "type": "ai_image", "title": "SKU2·白底SKU图·配色二（1:1·2K）", "x": 320, "y": 420, "w": 255, "h": 340, "data": { "model": "nano-banana-2", "provider": "jijing", "size": "1:1", "resolution": "2K", "quality": "high" }, "promptFile": "S1_白底SKU重生成_v14.txt" },
+
+    { "ref": "INR3", "type": "ai_image", "title": "INR3·原片·配色三", "x": -500, "y": 840, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "A03", "type": "ai_chat", "title": "A03·原片分析·配色三", "x": -140, "y": 840, "w": 380, "h": 340, "promptFile": "A0_原片分析_v14.txt" },
+    { "ref": "SKU3", "type": "ai_image", "title": "SKU3·白底SKU图·配色三（1:1·2K）", "x": 320, "y": 840, "w": 255, "h": 340, "data": { "model": "nano-banana-2", "provider": "jijing", "size": "1:1", "resolution": "2K", "quality": "high" }, "promptFile": "S1_白底SKU重生成_v14.txt" },
+
+    { "ref": "INR4", "type": "ai_image", "title": "INR4·原片·配色四", "x": -500, "y": 1260, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "A04", "type": "ai_chat", "title": "A04·原片分析·配色四", "x": -140, "y": 1260, "w": 380, "h": 340, "promptFile": "A0_原片分析_v14.txt" },
+    { "ref": "SKU4", "type": "ai_image", "title": "SKU4·白底SKU图·配色四（1:1·2K）", "x": 320, "y": 1260, "w": 255, "h": 340, "data": { "model": "nano-banana-2", "provider": "jijing", "size": "1:1", "resolution": "2K", "quality": "high" }, "promptFile": "S1_白底SKU重生成_v14.txt" },
+
+    { "ref": "INR5", "type": "ai_image", "title": "INR5·原片·配色五", "x": -500, "y": 1680, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "A05", "type": "ai_chat", "title": "A05·原片分析·配色五", "x": -140, "y": 1680, "w": 380, "h": 340, "promptFile": "A0_原片分析_v14.txt" },
+    { "ref": "SKU5", "type": "ai_image", "title": "SKU5·白底SKU图·配色五（1:1·2K）", "x": 320, "y": 1680, "w": 255, "h": 340, "data": { "model": "nano-banana-2", "provider": "jijing", "size": "1:1", "resolution": "2K", "quality": "high" }, "promptFile": "S1_白底SKU重生成_v14.txt" },
+
+    { "ref": "INR6", "type": "ai_image", "title": "INR6·原片·配色六", "x": -500, "y": 2100, "w": 255, "h": 340, "data": { "size": "1:1" }, "media": "874ec550-0822-40e2-ad71-5bbe32724e47.jpg" },
+    { "ref": "A06", "type": "ai_chat", "title": "A06·原片分析·配色六", "x": -140, "y": 2100, "w": 380, "h": 340, "promptFile": "A0_原片分析_v14.txt" },
+    { "ref": "SKU6", "type": "ai_image", "title": "SKU6·白底SKU图·配色六（1:1·2K）", "x": 320, "y": 2100, "w": 255, "h": 340, "data": { "model": "nano-banana-2", "provider": "jijing", "size": "1:1", "resolution": "2K", "quality": "high" }, "promptFile": "S1_白底SKU重生成_v14.txt" }
+  ],
+  "connections_note": "六条完全独立的并行支线，一个配色一套 `INRn → A0n → SKUn`（INRn 同时直连 SKUn 当图源）。**提示词直接复用主画布 V14.7 的 `A0_原片分析_v14.txt` 与 `S1_白底SKU重生成_v14.txt`，一个字都没改**——改那两份文件，主画布和这条线一起变。★ 为什么每条支线都要自己的 A0：每个配色的道具、遮挡、倾斜角、褶皱分布都不一样，A0 逐张读图写指令，S1 照单执行，这样换配色不用改提示词（这正是 A0 存在的理由）。★ 分两组是为了控成本：A0 六张是 chat 便宜，先跑；SKU 六张是 2K high 并发，**这是本线最贵的一步**，单独一组好让 Joe 确认后再点，钱紧还能只跑其中几张。★ 槽位无歧义：每张 SKUn 只有 INRn 一个图输入，放错顺序也不会串色，但建议按固定顺序放便于核对。★ 产物仍须逐张人工核可后手动拖进主画布的 IN 槽——AI 重绘产物是下游唯一图源，错一张下游全错，这道闸不能自动化（沿用 V13.1 的 S0 铁则）。",
+  "connections": [
+    ["INR1", "A01"], ["INR1", "SKU1"], ["A01", "SKU1"],
+    ["INR2", "A02"], ["INR2", "SKU2"], ["A02", "SKU2"],
+    ["INR3", "A03"], ["INR3", "SKU3"], ["A03", "SKU3"],
+    ["INR4", "A04"], ["INR4", "SKU4"], ["A04", "SKU4"],
+    ["INR5", "A05"], ["INR5", "SKU5"], ["A05", "SKU5"],
+    ["INR6", "A06"], ["INR6", "SKU6"], ["A06", "SKU6"]
+  ],
+  "groups": [
+    { "ref": "GRP1", "title": "①六张原片分析（A01-A06·便宜·先跑这个）", "color": "#3B82F6", "members": ["A01", "A02", "A03", "A04", "A05", "A06"] },
+    { "ref": "GRP2", "title": "②六张白底SKU出图（SKU1-SKU6·2K并发·最贵的一步·确认后再点）", "color": "#F59E0B", "members": ["SKU1", "SKU2", "SKU3", "SKU4", "SKU5", "SKU6"] }
+  ]
+}
