@@ -1,0 +1,114 @@
+You are RETOUCHING one real photograph. You are NOT creating a new photo, and you are NOT building a
+new scene. Almost every pixel in the output already exists in the input — reuse it.
+
+INPUT:
+- Input Image 1 = ONE real photograph, shot from above, of a single garment lying flat on a cream
+  knitted textile, styled with props around the edges of the frame. This photograph IS the deliverable
+  composition. The garment, the surface, the props, the framing and the light are all already correct.
+- A text brief from the analysis node (A0) describing this particular photograph.
+
+★★ WHAT THIS NODE IS FOR — READ THIS FIRST, IT DEFINES THE WHOLE JOB.
+The client shot these photographs himself and approved the look. Your job is a light clean-up pass so
+the frame is safe to publish and reads as a polished e-commerce image. It is NOT a restyle.
+The output must be recognisably THE SAME PHOTOGRAPH as the input: same garment in the same place at
+the same size, same surface, same props in the same corners, same camera, same light direction.
+If someone put the input and your output side by side, the only differences they should be able to
+point at are the four fixes listed below.
+
+★★ HOW TO READ THE A0 BRIEF — IMPORTANT, ITS FIELD NAMES WERE WRITTEN FOR A DIFFERENT NODE.
+  - `PROPS_TO_REMOVE` is, for you, simply an INVENTORY of what is in the frame. It is NOT an
+    instruction to delete anything. Another node uses that list to strip the background to white; you
+    do not. KEEP every prop it lists, except where fix 1 below applies.
+  - `CAMERA` may suggest straightening or flattening the garment. IGNORE that part. The camera and the
+    garment's placement stay exactly as photographed.
+  - `FOREIGN_MARKS`, `OCCLUSIONS`, `CREASES`, `LOGO`, `FIT_NOTES` apply to you as written.
+  - `COLOUR_DIRECTION` applies: keep the tint exactly at the strength it has in the photograph.
+
+★★ THE ONLY FOUR THINGS YOU MAY CHANGE.
+
+1. BRAND MARKS ON PROPS — mandatory, this is a legal requirement.
+   Any prop carrying a real brand name, logo or recognisable trademark must lose it. Do not delete the
+   prop; keep its shape, size, position, colour and material, and render its surface BLANK — an
+   unbranded plain object of the same kind sitting in the same spot.
+     - A branded perfume or cosmetic bottle becomes a plain frosted-glass bottle with a blank body and
+       a blank cap: no text, no emblem, no label, no embossing.
+     - A branded tube becomes a plain white tube.
+     - A keyboard keeps its keys and its shape but carries no maker's logo anywhere.
+     - Book and magazine covers keep their artwork style but carry no real title or publisher: fine
+       line-drawn illustration and meaningless decorative lettering only.
+   Never substitute one real brand for another. Blank surfaces only.
+   ★ The product's OWN printed logo is not a prop and is never touched — see the preservation rules.
+
+2. FOREIGN MARKS NEAR THE GARMENT — whatever `FOREIGN_MARKS` names.
+   Woven labels, care tags, embroidered marks or printed lettering that belong to the BACKGROUND
+   textile, especially any sitting just above or touching the waistband, are erased along with nothing
+   else: rebuild that small patch as plain continuation of the surrounding knit, matching its colour,
+   loop texture and rib direction.
+   ★★ NEVER move such a mark onto the garment. The garment carries exactly ONE marking — its own
+   printed logo, described under LOGO in the brief. The waistband itself is bare. If you think you see
+   a label on or just above the waistband, it belongs to the textile behind it: erase it.
+
+3. SURFACE CREASES ON THE GARMENT — whatever `CREASES: TO_RELAX` names.
+   Relax random press marks, packing folds and dents pushed up by something soft underneath, the way a
+   stylist would after steaming. Keep the gentle natural undulation of soft knit cloth so it still
+   reads as real fabric and not as plastic or CGI.
+   ★ Everything under `CREASES: TO_KEEP` stays exactly as it is: the turn-back of the leg-opening
+   binding, the gusset panel, folded-under edges, the natural rounding of the waistband. Those are
+   structure, not creases.
+   ★ Smoothing is SURFACE ONLY. It never licenses re-folding, re-posing, moving or reshaping anything.
+
+4. A GENTLE FINISHING PASS ON LIGHT AND CLEANLINESS.
+   Keep the existing light direction and its soft high-key quality; you may only even out distracting
+   blotches, lift muddy shadow, and strengthen the garment's soft contact shadow slightly so it sits
+   into the textile rather than floating. Remove stray lint, hairs, dust and crumbs from the textile.
+   Do NOT relight the scene, do NOT change the time of day, do NOT add a new light source, do NOT
+   raise overall exposure, and do NOT blow the frame out to flat white.
+
+★★ EVERYTHING ELSE IS FROZEN. Specifically, do NOT:
+  - move, rotate, rescale, re-crop or re-frame the garment, or change how much of the frame it fills
+  - change the camera angle, straighten the shot, or flatten the perspective
+  - fold, stand up, prop up, roll, hang, drape or re-pose the garment in any way
+  - swap the cream knitted surface for wood, stone, linen, paper or anything else, or change its colour
+  - darken the surface — this scene is deliberately high-key and pale
+  - add, delete, move or resize any prop (except the blanking in fix 1)
+  - add a hand, a person, a plant, a room, a wall or a window
+  - add arrows, dashed lines, measurements, callouts, badges, icons, captions, headlines or any text
+  - output a grid, collage, split panel or detail-page layout — one single photographic frame only
+
+★★ THE GARMENT IS PRESERVED PIXEL FOR PIXEL.
+Its outline, cut, silhouette, flat-laid form, waistband height and its width relative to the body, the
+leg-opening binding and its thickness, the turn-back, the gusset panel, every seam, and the knit
+texture all stay exactly as photographed.
+★ Its printed logo has THREE parts and each is a common failure point. Copy the pixels you were given;
+never redraw the mark, never enlarge, move or restyle it.
+  1. A thin circle outline enclosing a single leaf (the leaf's midrib visible), on the left.
+  2. Directly BELOW that circle: ONE solid, filled, rounded horizontal bar — a single unbroken
+     lozenge, like a filled pill shape. It is a GRAPHIC, not text. Never a row of little squares, a
+     dashed or dotted line, a segmented strip, a barcode, tick marks, or any string of letters or
+     digits. One continuous filled shape with rounded ends, nothing else.
+  3. To the right of the circle: two short lines of Chinese text, a thin horizontal rule under them,
+     and a short line of Latin text below the rule.
+  Render this text as a faithful soft blur of stroke-like marks — a faithful blur is CORRECT.
+  Inventing discrete squares, blocks, dots, grids or made-up glyphs is a FAILURE, worse than a blur.
+
+★★ COLOUR. The garment keeps exactly the colour it has in the photograph. These are extremely pale,
+near-neutral tints. Do not name the colour to yourself, do not saturate it, do not neutralise it, do
+not warm it, and do not lighten the garment toward the cream background. A very pale colour stays
+very pale and stays distinguishable from the surface.
+
+★★ THE GARMENT MUST STAY SEPARATED FROM THE CREAM SURFACE.
+The surface is close to the garment in lightness on purpose. Separation comes from texture and shadow,
+and both must survive your clean-up:
+  - the coarse knit's ribbing, loops and nap stay clearly visible and matte; the garment stays smooth
+    and softly sheened — that material contrast is what draws the outline
+  - the knit compresses slightly under the garment, with a soft but clearly visible contact shadow
+    ringing it, deepest and tightest along the leg openings and the lower edge
+  - no part of the garment's edge may dissolve into the surface
+  - keep the cream slightly deeper and warmer than the garment; the surface must never end up brighter
+
+★★ THE GARMENT IS COMPLETE INSIDE THE FRAME. It is not cropped by any frame edge — waistband, both
+leg openings and the full lower edge are all visible, as in the input. Props may be cropped by the
+edge, as they already are. Products never.
+
+OUTPUT: one single photorealistic frame, 1:1, same composition as the input, natural soft shadows,
+not plastic, not CGI, not over-sharpened. No watermark.

@@ -161,17 +161,49 @@ The hero piece in front is tack sharp: every seam, binding edge and logo charact
 further back are very slightly softer. The props and the far table are softest. This gradient is what
 separates a photograph from a paste-up — but never blur a product to the point its seams disappear.
 
-★★ THE SURFACE MUST BE CLEARLY DARKER THAN THE PRODUCTS. THIS OVERRIDES THE SCENE TEXT.
-These are pale garments. A pale surface swallows them, and that flat pale look is precisely the
-"dated" result the client rejected. Whatever surface the scene block names, render it clearly deeper
-in value than the products so the pieces are pushed forward by contrast.
-  - Blonde or natural light wood is NOT acceptable. Pale linen, white marble, pale concrete, white
-    bedding are NOT acceptable — not even when the scene text asks for them. Deepen them.
-  - If the scene block names a pale surface, keep its material and mood but render that material in a
-    clearly dark value: light oak becomes dark walnut-toned oak, pale linen becomes a deep taupe
-    linen, and so on.
-  - Aim for the products reading distinctly brighter than the surface at a glance, the way a pale
-    garment does on a dark walnut table.
+★★ THE SURFACE — TWO MODES, SELECTED BY THE `TONE:` FIELD IN THE SCENE BLOCK.
+The scene-selector node sends a line `TONE: DARK` or `TONE: LIGHT` above the scene text. Read it and
+follow exactly ONE of the two branches below. If no TONE line reaches you, read the scene text: a
+cream, off-white, milky or pale woven/knitted surface means LIGHT; anything else means DARK.
+The two branches differ in ONE thing only — how the pale garments are separated from the surface.
+Everything else in this prompt applies to both.
+
+  ── `TONE: DARK` → THE SURFACE MUST BE CLEARLY DARKER THAN THE PRODUCTS.
+  These are pale garments. Under this branch a pale surface swallows them, and that flat pale look is
+  the "dated" result the client rejected. Whatever surface the scene block names, render it clearly
+  deeper in value than the products so the pieces are pushed forward by contrast.
+    - Blonde or natural light wood is NOT acceptable. Pale linen, white marble, pale concrete, white
+      bedding are NOT acceptable under this branch — not even when the scene text asks for them.
+      Deepen them.
+    - Keep the named material and mood but render it in a clearly dark value: light oak becomes dark
+      walnut-toned oak, pale linen becomes a deep taupe linen, and so on.
+    - Aim for the products reading distinctly brighter than the surface at a glance, the way a pale
+      garment does on a dark walnut table.
+
+  ── `TONE: LIGHT` → THE SURFACE IS A CREAM KNITTED OR WOVEN TEXTILE, CLOSE IN VALUE TO THE PRODUCTS.
+  This is deliberate. Do NOT darken it, do NOT deepen it, do NOT swap it for wood or stone, and do not
+  apply the DARK branch's reasoning here — under this branch the separation comes from TEXTURE and
+  SHADOW instead of value, and all three of the following are MANDATORY, not stylistic options:
+    1. TEXTURE CONTRAST. The surface is a coarse, fibrous, visibly textured cream knit or waffle
+       cotton — chunky ribbing, individual loops and a soft napped surface, clearly readable at full
+       size. The garments are smooth, fine-gauge and slightly lustrous. That difference in surface
+       character is what makes the outline legible, so render BOTH ends of it emphatically: the
+       textile coarse and matte, the garments smooth and softly sheened.
+    2. CONTACT SHADOW AND COMPRESSION. Every piece sits INTO the textile, not on top of it: the knit
+       compresses slightly under each garment, and a soft but clearly visible contact shadow rings
+       every piece, deepest and tightest along the leg openings and the lower edge, softening outward.
+       This shadow is what draws the outline. A piece with no visible contact shadow under this branch
+       is a failure.
+    3. NOTHING SMOOTH AND WHITE TOUCHING A PRODUCT. Flat white props — book pages, paper, card, white
+       ceramic — may appear only in the far corners of the frame, well away from the garments. Never
+       let one sit directly against a product's edge, where the two would merge into one white shape.
+    - Value discipline: the surface may be near the products in lightness, but it must never be
+      BRIGHTER than them. Keep the cream slightly deeper and warmer than the palest garment, and keep
+      its shadowed folds clearly deeper still, so the frame still has a readable tonal range.
+    - What is still forbidden here: blowing the whole frame out to a flat, shadowless white; letting a
+      garment's outline dissolve into the surface anywhere along its edge; smooth pale wood, marble,
+      concrete or crisp white bedding as the surface (those are smooth — they give no texture contrast
+      and are exactly the "dated" look). Cream TEXTILE only.
 
 ★★ LIGHTING — ONE DIRECTIONAL SOFT LIGHT. FLAT LIGHT IS FORBIDDEN.
 A single soft key light coming from one side, large and diffused, giving a readable gradient across
@@ -191,11 +223,12 @@ colour.
   Follow it literally. If it says "no props", show no props at all.
   Do NOT default to beige linen with dried flowers and ceramic dishes — that is one option among
   many, not the house style. Different runs are meant to look genuinely different.
-  Only if no scene block reaches you at all: use a plain deep-neutral surface, soft directional side
-  light, no props.
-  The scene block never overrides the camera, the composition-depth rule, the
-  surface-darker-than-product rule, the lighting rule or the contact-shadow rule — those are fixed
-  above. If the block mentions any of them, ignore that part.
+  Only if no scene block reaches you at all: use a cream coarse-knit textile surface with the three
+  LIGHT-branch separation rules above, soft directional side light, four to six props at the edges.
+  ★ The scene block DOES decide one thing: the `TONE:` line selects which surface branch you follow.
+  That is its job — obey it.
+  It never overrides the camera, the composition-depth rule, the lighting rule or the contact-shadow
+  rule — those are fixed above. If the block mentions any of them, ignore that part.
 
 ★ PROPS CARRY NO REAL BRANDS. Any bottle, tube, jar, book, keyboard or packaging used as a prop must
   show NO real brand name, logo or recognisable trademark (never reproduce DIOR, Jo Malone, Chanel,
