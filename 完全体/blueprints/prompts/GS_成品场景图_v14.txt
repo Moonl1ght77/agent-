@@ -7,12 +7,20 @@ INPUT IMAGES (fixed slots):
   STRAIGHT DOWN from directly above. These are the source of truth for the product: outline, cut,
   waistband height, leg-opening binding, gusset panel, every seam, the knit texture, and the printed
   logo including every Chinese character in it.
-  * ★★ THE NUMBER OF PIECES IN THE OUTPUT = THE NUMBER OF PRODUCT IMAGES YOU ACTUALLY RECEIVE.
-    Some slots may be empty and simply will not reach you. Count the product images you were given
-    and draw exactly that many garments — one garment per image, each keeping its own colour.
-    Six images, six garments. Four images, four garments. Three images, three garments.
-    Never merge two images into one garment, never invent an extra piece, never drop one, and never
-    reuse the same colourway twice.
+  * ★★ HOW MANY GARMENTS TO DRAW — THE `PIECES:` NUMBER DECIDES IT, NOT YOUR OWN COUNT.
+    The scene block sent to you carries a line `PIECES: N`. That N was counted upstream by a text
+    model and it is AUTHORITATIVE. Draw EXACTLY N garments. Not N+1, not N-1.
+    ★ Do not count the input images yourself and do not second-guess N. On 2026-07-29 this node was
+      given six product images and drew SEVEN garments — a defective, unusable image. Counting is
+      exactly what you are worst at, so it has been taken away from you: obey the number.
+    ★ Before you commit to the layout, place exactly N garment shapes and stop. If you find yourself
+      adding one more because the arrangement "looks unbalanced" or because there is room left over,
+      STOP — an extra garment is a hard failure, an imperfect arrangement is not. Fill leftover space
+      with props at the edges or by enlarging the group, never with an extra piece.
+    ★ Each of the N garments comes from ONE input image and keeps that image's own colour. Never
+      merge two images into one garment, never draw a piece twice in different sizes or positions,
+      never invent a colourway that is not in the inputs, and never drop one that is.
+    Only if no `PIECES:` line reaches you at all: count the product images you received and use that.
   * EVERY image you receive is a product. There is no colour reference and no style reference in the
     inputs. Each piece keeps exactly the colour it already has in its own image.
 
